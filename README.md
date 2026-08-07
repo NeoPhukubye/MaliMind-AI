@@ -10,7 +10,7 @@ MaliMind AI is an AI-powered financial coaching platform that helps users build 
 
 - **Frontend:** React, Vite, Tailwind CSS
 - **Backend:** FastAPI, Python 3.12
-- **AI:** OpenAI API
+- **AI:** Google Gemini API
 - **Database:** PostgreSQL
 - **Auth:** Clerk
 - **Payments:** RevenueCat
