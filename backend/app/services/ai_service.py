@@ -1,7 +1,8 @@
-from openai import AsyncOpenAI
+import google.generativeai as genai
 from app.config import settings
 
-client = AsyncOpenAI(api_key=settings.openai_api_key)
+genai.configure(api_key=settings.gemini_api_key)
+model = genai.GenerativeModel("gemini-1.5-flash")
 
 SYSTEM_PROMPT = """You are MaliMind AI, a friendly and knowledgeable financial coach specializing in personal finance for people in Africa.
 
@@ -19,20 +20,19 @@ Personality: warm, supportive, practical, African-centered."""
 
 
 async def get_coach_response(message: str, history: list[dict]) -> str:
-    messages = [{"role": "system", "content": SYSTEM_PROMPT}]
+    contents = []
 
     for msg in history[-10:]:
-        messages.append({"role": msg.get("role", "user"), "content": msg.get("content", "")})
+        role = "model" if msg.get("role") == "assistant" else "user"
+        contents.append({"role": role, "parts": [msg.get("content", "")]})
 
-    messages.append({"role": "user", "content": message})
+    contents.append({"role": "user", "parts": [message]})
 
     try:
-        response = await client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=messages,
-            max_tokens=500,
-            temperature=0.7,
+        chat = model.start_chat(history=contents[:-1])
+        response = chat.send_message(
+            f"{SYSTEM_PROMPT}\n\nUser: {message}" if not contents[:-1] else message
         )
-        return response.choices[0].message.content
+        return response.text
     except Exception as e:
         return f"I'm having trouble connecting right now. Please try again in a moment. (Error: {str(e)[:50]})"
