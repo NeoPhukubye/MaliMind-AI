@@ -1,10 +1,19 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from contextlib import asynccontextmanager
 from app.config import settings
+from app.database.db import engine, Base
 from app.api import budget, ai, savings, subscriptions, users
 
 
-app = FastAPI(title="MaliMind AI", version="1.0.0")
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+    yield
+
+
+app = FastAPI(title="MaliMind AI", version="1.0.0", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
