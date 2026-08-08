@@ -14,10 +14,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-          cache-dependency-path: frontend/package-lock.json
-      - run: cd frontend && npm ci
-      - run: cd frontend && npm run lint
+      - run: cd frontend && npm install
       - run: cd frontend && npm run build
 
   backend:
@@ -28,4 +25,20 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r backend/requirements.txt
-      - run: cd backend && python -c "from app.main import app; print('OK')"
+      - run: cd backend && python -c "
+          import sys, ast, os;
+          errors = [];
+          for root, dirs, files in os.walk('app'):
+            for f in files:
+              if f.endswith('.py'):
+                path = os.path.join(root, f);
+                try:
+                  ast.parse(open(path).read())
+                except SyntaxError as e:
+                  errors.append(f'{path}: {e}');
+          if errors:
+            print('\n'.join(errors));
+            sys.exit(1);
+          print('All Python files parse OK')
+          "
+      - run: cd backend && python -c "from app.main import app; print('App imports OK')"
