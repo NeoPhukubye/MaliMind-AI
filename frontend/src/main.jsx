@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
-import { ClerkProvider } from '@clerk/clerk-react'
-import { AuthProvider, NoAuthProvider } from './context/AuthContext'
+import { NoAuthProvider } from './context/AuthContext'
 import App from './App'
 import './styles/index.css'
 
 const clerkKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+
+const ClerkApp = lazy(() => import('./ClerkApp'))
 
 function Root() {
   if (!clerkKey) {
@@ -20,13 +21,9 @@ function Root() {
   }
 
   return (
-    <ClerkProvider publishableKey={clerkKey}>
-      <BrowserRouter basename="/MaliMind-AI">
-        <AuthProvider>
-          <App />
-        </AuthProvider>
-      </BrowserRouter>
-    </ClerkProvider>
+    <Suspense fallback={<div className="flex items-center justify-center h-screen">Loading...</div>}>
+      <ClerkApp />
+    </Suspense>
   )
 }
 
