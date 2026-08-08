@@ -4,6 +4,15 @@ import { loginWithClerk, getCurrentUser } from '../services/auth'
 
 const AuthContext = createContext(null)
 
+export function NoAuthProvider({ children }) {
+  const login = () => alert('Authentication not configured. Set VITE_CLERK_PUBLISHABLE_KEY to enable login.')
+  return (
+    <AuthContext.Provider value={{ user: null, isAuthenticated: false, isLoading: false, login, logout: () => {} }}>
+      {children}
+    </AuthContext.Provider>
+  )
+}
+
 export function AuthProvider({ children }) {
   const { isSignedIn, user: clerkUser, isLoaded } = useUser()
   const { openSignIn, signOut } = useClerk()

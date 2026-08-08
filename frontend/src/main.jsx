@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import { ClerkProvider } from '@clerk/clerk-react'
-import { AuthProvider } from './context/AuthContext'
+import { AuthProvider, NoAuthProvider } from './context/AuthContext'
 import App from './App'
 import './styles/index.css'
 
@@ -12,7 +12,9 @@ function Root() {
   if (!clerkKey) {
     return (
       <BrowserRouter basename="/MaliMind-AI">
-        <App />
+        <NoAuthProvider>
+          <App />
+        </NoAuthProvider>
       </BrowserRouter>
     )
   }
