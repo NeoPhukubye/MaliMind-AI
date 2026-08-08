@@ -29,8 +29,11 @@ export default function Coach() {
     try {
       const res = await api.post('/api/ai/coach', { message: input, history: messages })
       setMessages((prev) => [...prev, { role: 'assistant', content: res.data.response }])
-    } catch {
-      setMessages((prev) => [...prev, { role: 'assistant', content: "Sorry, I couldn't process that. Please try again." }])
+    } catch (err) {
+      const detail = err.response?.status === 429
+        ? "You've reached your daily free message limit. Upgrade to Pro for unlimited coaching!"
+        : "Sorry, I couldn't process that. Please try again."
+      setMessages((prev) => [...prev, { role: 'assistant', content: detail }])
     } finally {
       setLoading(false)
     }

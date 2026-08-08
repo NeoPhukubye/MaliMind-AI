@@ -54,9 +54,11 @@ class CoachResponse(BaseModel):
 
 
 class SubscriptionPurchase(BaseModel):
-    userId: str
+    userId: str = ""
+    receipt: str | None = None
 
 
 class SubscriptionStatus(BaseModel):
     isPro: bool = False
     messageCount: int = 0
+    dailyLimit: int | None = None
