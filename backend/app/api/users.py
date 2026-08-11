@@ -82,12 +82,21 @@ async def dashboard(
         for c in categories if c.get("spent", 0) > 0
     ]
 
+    insights = generate_insights(
+        income=income,
+        categories=categories,
+        goals=goals,
+        financial_score=financial_score,
+    )
+
     return {
         "totalBudget": total_budget,
         "totalSpent": total_spent,
         "totalSavings": total_savings,
         "financialScore": financial_score,
+        "income": income,
         "spendingByCategory": spending_by_category or [
             {"name": "No data yet", "amount": 0}
         ],
+        "insights": insights,
     }
