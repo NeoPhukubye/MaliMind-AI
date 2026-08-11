@@ -5,7 +5,7 @@ from app.schemas.schemas import AuthRequest, UserResponse
 from app.database.db import get_db
 from app.core.auth import get_current_user_id
 from app.models.models import User, BudgetData, SavingsData
-from app.services.analytics import calculate_financial_score
+from app.services.analytics import calculate_financial_score, generate_insights
 
 router = APIRouter()
 
