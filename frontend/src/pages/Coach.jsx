@@ -1,11 +1,20 @@
 import { useState, useRef, useEffect } from 'react'
-import { Send, Bot, User } from 'lucide-react'
+import { Send, Bot, User, Sparkles } from 'lucide-react'
 import { api } from '../services/api'
 import { useSubscription } from '../hooks/useSubscription'
 
+const SUGGESTED_PROMPTS = [
+  "How can I save more on my current income?",
+  "What's the 50/30/20 rule for my budget?",
+  "Should I join a stokvel or open a TFSA?",
+  "Help me create a debt repayment plan",
+  "How much should my emergency fund be?",
+  "Tips for reducing my grocery spending",
+]
+
 export default function Coach() {
   const [messages, setMessages] = useState([
-    { role: 'assistant', content: "Hi! I'm your MaliMind AI financial coach. Ask me anything about budgeting, saving, investing, or managing debt. How can I help you today?" },
+    { role: 'assistant', content: "Hi! I'm your MaliMind AI financial coach. I can see your budget, savings goals, and financial health score — so my advice is personalized to your situation. What would you like help with today?" },
   ])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
@@ -16,18 +25,19 @@ export default function Coach() {
     messagesEnd.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages])
 
-  async function sendMessage(e) {
-    e.preventDefault()
-    if (!input.trim() || loading) return
+  async function sendMessage(e, overrideMessage) {
+    if (e) e.preventDefault()
+    const msg = overrideMessage || input
+    if (!msg.trim() || loading) return
     if (!isPro && messageCount >= maxFreeMessages) return
 
-    const userMsg = { role: 'user', content: input }
+    const userMsg = { role: 'user', content: msg }
     setMessages((prev) => [...prev, userMsg])
     setInput('')
     setLoading(true)
 
     try {
-      const res = await api.post('/api/ai/coach', { message: input, history: messages })
+      const res = await api.post('/api/ai/coach', { message: msg, history: messages })
       setMessages((prev) => [...prev, { role: 'assistant', content: res.data.response }])
     } catch (err) {
       const detail = err.response?.status === 429
@@ -38,6 +48,8 @@ export default function Coach() {
       setLoading(false)
     }
   }
+
+  const showSuggestions = messages.length <= 1 && !loading
 
   return (
     <div className="flex flex-col h-[calc(100vh-8rem)]">
@@ -68,6 +80,27 @@ export default function Coach() {
             )}
           </div>
         ))}
+
+        {/* Suggested prompts */}
+        {showSuggestions && (
+          <div className="pt-2">
+            <p className="text-xs text-gray-400 mb-2 flex items-center gap-1">
+              <Sparkles className="w-3 h-3" /> Try asking:
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {SUGGESTED_PROMPTS.map((prompt) => (
+                <button
+                  key={prompt}
+                  onClick={() => sendMessage(null, prompt)}
+                  className="text-xs bg-primary-50 text-primary-700 px-3 py-1.5 rounded-lg hover:bg-primary-100 transition border border-primary-100"
+                >
+                  {prompt}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
         {loading && (
           <div className="flex gap-3">
             <div className="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center">

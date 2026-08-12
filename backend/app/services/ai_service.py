@@ -37,7 +37,11 @@ def build_context_prompt(financial_context: dict | None) -> str:
         parts.append(f"Total Budgeted: R{total_budget:,.0f} | Total Spent: R{total_spent:,.0f}")
         overspent = [c for c in ctx["categories"] if c.get("spent", 0) > c.get("amount", 0)]
         if overspent:
-            parts.append(f"OVERSPENT categories: {', '.join(c['name'] + f' (R{c[\"spent\"] - c[\"amount\"]:,.0f} over)' for c in overspent)}")
+            over_items = []
+            for c in overspent:
+                over_amt = c.get("spent", 0) - c.get("amount", 0)
+                over_items.append(f"{c['name']} (R{over_amt:,.0f} over)")
+            parts.append(f"OVERSPENT categories: {', '.join(over_items)}")
 
     if ctx.get("goals"):
         parts.append("Savings Goals:")

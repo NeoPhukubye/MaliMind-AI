@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useAuth } from '../context/AuthContext'
-import { checkSubscription, purchaseSubscription } from '../services/revenuecat'
+import { checkEntitlement } from '../services/revenuecat'
+import { api } from '../services/api'
 
 export function useSubscription() {
   const { user } = useAuth()
@@ -10,18 +11,16 @@ export function useSubscription() {
 
   useEffect(() => {
     if (user) {
-      checkSubscription(user.id || user.email).then((data) => {
+      checkEntitlement().then((data) => {
         setIsPro(data.isPro || false)
-        setMessageCount(data.messageCount || 0)
-      })
+      }).catch(() => {})
+
+      api.get('/api/subscriptions/status/' + (user.id || '')).then((res) => {
+        setIsPro(res.data.isPro || false)
+        setMessageCount(res.data.messageCount || 0)
+      }).catch(() => {})
     }
   }, [user])
 
-  async function subscribe() {
-    if (!user) return
-    const result = await purchaseSubscription(user.id || user.email)
-    if (result.success) setIsPro(true)
-  }
-
-  return { isPro, subscribe, messageCount, maxFreeMessages }
+  return { isPro, messageCount, maxFreeMessages }
 }
