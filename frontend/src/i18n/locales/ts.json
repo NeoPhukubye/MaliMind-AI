@@ -1,0 +1,153 @@
+{
+  "common": {
+    "appName": "MaliMind AI",
+    "loading": "Ku layicha...",
+    "loadingFinances": "Ku layicha timali ta wena...",
+    "cancel": "Khansela",
+    "delete": "Sula",
+    "save": "Hlayisa",
+    "signOut": "Huma",
+    "getStarted": "Sungula",
+    "goToDashboard": "Famba eka Dashboard",
+    "noCreditCard": "A ku laveki khadi ya xikweleti",
+    "startFree": "Sungula Mahala Namuntlha"
+  },
+  "nav": {
+    "dashboard": "Daxibodo",
+    "budget": "Bajete",
+    "savings": "Ku Hlayisa",
+    "aiCoach": "Mucoach wa AI",
+    "premium": "Phrimiyamu",
+    "profile": "Phrofayela"
+  },
+  "landing": {
+    "tagline": "Yi akiwile eka Afrika, hi va-Afrika",
+    "heroTitle": "Mucoach wa Wena wa Timali wa AI",
+    "heroHighlight": "wa Afrika",
+    "heroDesc": "Aka mikhuva leyinene ya timali hi ku tirhisa ku pulana ka bajete ko tlhariha, mipulano ya ku hlayisa, na nkombiso lowu kongomeke — hinkwaswo swi lulamiseriwile xiyimo xa timali xa Afrika-Dzonga.",
+    "features": {
+      "aiCoach": "Mucoach wa Timali wa AI",
+      "aiCoachDesc": "Nkongomelo lowu kongomeke lowu tirhisaka AI leyi tivaka bajete ya wena, swikongomelo swa ku hlayisa, na mikhuva ya ku tirhisa mali",
+      "smartBudget": "Ku Pulana ka Bajete ko Tlhariha",
+      "smartBudgetDesc": "Landzela ku tirhisa ka mali hi tikhategorhi hi tibara to ya emahlweni na switiviso swa ku tirhisa ngopfu",
+      "savingsGoals": "Swikongomelo swa Ku Hlayisa",
+      "savingsGoalsDesc": "Veka swikongomelo leswi nga na minkarhi yo hela u kuma swibumabumelo swo tlhariha ku swi fikelela hi ku hatlisa",
+      "healthScore": "Tiphoyinti ta Rihanyo ra Timali",
+      "healthScoreDesc": "Tiphoyinti to cinca leti kombisaka nhlengo, ku tirhisa, mpimo wa ku hlayisa, na rihanyo ra xikweleti"
+    },
+    "stats": {
+      "paycheckStat": "ya vanhu va Afrika-Dzonga va hanya muholo hi muholo",
+      "priceStat": "/hi n'hweti ya ku coachiwi hi AI ko ka heli",
+      "freeStat": "marungula ya AI ya mahala hi siku"
+    },
+    "howItWorks": "Yi Tirha Njhani",
+    "steps": {
+      "step1Title": "Veka Bajete ya Wena",
+      "step1Desc": "Nghenisa nhlengo wa wena u endla tikhategorhi ta ku tirhisa mali",
+      "step2Title": "Landzela & Hlayisa",
+      "step2Desc": "Tsala swikhatho u veka swikongomelo swa ku hlayisa leswi nga na minkarhi",
+      "step3Title": "Kuma Ku Coachiwi hi AI",
+      "step3Desc": "Vutisa mucoach wa wena wa AI nkongomelo wa timali lowu kongomeke"
+    },
+    "testimonial": "MaliMind yi ndzi pfunile ku hlayisa R15,000 ya fandhi ya mina ya swiyimo swa xihatla hi tin'hweti ta mune ntsena. Mucoach wa AI u ndzi hlayisa ndzi ri na vutihlamuleri hi ndlela leyi app yi nga tshamaka yi endlanga.",
+    "testimonialName": "Thandi M.",
+    "testimonialLocation": "Doroba ra Kapa, Afrika-Dzonga",
+    "footer": "© 2024 MaliMind AI. Yi akiwile hi Neo Phukubye."
+  },
+  "dashboard": {
+    "title": "Daxibodo",
+    "monthlyBudget": "Bajete ya N'hweti",
+    "totalSpent": "Ntsengo Hinkwayo leyi Tirhisiweke",
+    "totalSavings": "Ntsengo Hinkwayo leyi Hlayisiweke",
+    "financialScore": "Tiphoyinti ta Timali",
+    "smartInsights": "Vutivi byo Tlhariha"
+  },
+  "budget": {
+    "title": "Mupulani wa Bajete",
+    "logExpense": "Tsala Xikhatho",
+    "selectCategory": "Hlawula khategorhi",
+    "amountR": "Ntsengo (R)",
+    "logExpenseBtn": "Tsala Xikhatho",
+    "totalBudget": "Bajete Hinkwayo",
+    "totalSpent": "Ntsengo Hinkwayo leyi Tirhisiweke",
+    "remaining": "Leswi Saleke",
+    "monthlyIncome": "Nhlengo wa N'hweti",
+    "enterIncome": "Nghenisa nhlengo wa wena wa n'hweti",
+    "categoryName": "Vito ra khategorhi",
+    "budgetAmount": "Ntsengo ya bajete",
+    "addCategory": "Engetela Khategorhi",
+    "over": "(ku tlula!)"
+  },
+  "savings": {
+    "title": "Swikongomelo swa Ku Hlayisa",
+    "newGoal": "Xikongomelo Xintshwa",
+    "totalProgress": "Nhluvuko Hinkwawo wa Ku Hlayisa",
+    "goalPlaceholder": "Vito ra xikongomelo (xik., Fandhi ya Swiyimo swa Xihatla)",
+    "targetAmount": "Ntsengo leyi kongomiweke (R)",
+    "createGoal": "Tumbuluxa Xikongomelo",
+    "done": "Swi Endliwile!",
+    "complete": "swi hetile",
+    "amount": "Ntsengo",
+    "add": "+ Engetela",
+    "noGoals": "A ku na swikongomelo swa ku hlayisa sweswi. Tumbuluxa xa wena xo sungula!",
+    "createFirst": "Tumbuluxa Xikongomelo xa Wena xo Sungula",
+    "by": "Hi"
+  },
+  "coach": {
+    "title": "Mucoach wa Timali wa AI",
+    "greeting": "Xewani! Ndzi mucoach wa wena wa timali wa MaliMind AI. Ndzi kota ku vona bajete ya wena, swikongomelo swa ku hlayisa, na tiphoyinti ta rihanyo ra timali — kutani nkongomelo wa mina wu kongomeke eka xiyimo xa wena. U lava ku pfuniwa hi yini namuntlha?",
+    "freeTier": "Mpimo wa mahala: {{used}}/{{max}} marungula lama tirhisiweke.",
+    "upgradeToPro": "Tlakusela eka Pro",
+    "placeholder": "Vutisa mucoach wa wena wa timali...",
+    "tryAsking": "Ringeta ku vutisa:",
+    "limitReached": "U fikile eka ndzilekano wa marungula ya mahala ya siku. Tlakusela eka Pro ku kuma ku coachiwi ko ka heli!",
+    "error": "Ndzi khomeli, a ndzi swi kotanga ku lulamisa leswo. Ndzi kombela u ringeta nakambe.",
+    "suggestions": {
+      "save": "Ndzi nga hlayisa njhani ku tlula hi nhlengo wa mina?",
+      "rule": "Nawu wa 50/30/20 i wahi wa bajete ya mina?",
+      "stokvel": "Xana ndzi fanele ndzi joyina stokfela kumbe ku pfula TFSA?",
+      "debt": "Ndzi pfune ku endla pulano yo hakela swikweleti",
+      "emergency": "Xana fandhi ya mina ya swiyimo swa xihatla yi fanele yi va muni?",
+      "grocery": "Switsundzuxo swa ku hunguta ku tirhisa ka mali ya swakudya"
+    }
+  },
+  "profile": {
+    "title": "Phrofayela",
+    "noEmail": "A ku na imeyili",
+    "memberSince": "Xirho ku sukela {{date}}"
+  },
+  "premium": {
+    "proTitle": "U eka MaliMind Pro!",
+    "upgradeTitle": "Tlakusela eka Pro",
+    "proDesc": "Tiphina hi ku coachiwi ka timali ka AI ko ka heli na swihlawulekisi swa phrimiyamu.",
+    "upgradeDesc": "Pfula matimba lama heleleke ya ku coachiwi ka timali ko tirhisa AI.",
+    "proActive": "Pro Yi a Tirha",
+    "proAccess": "U na mfikelelo eka swihlawulekisi hinkwaswo swa phrimiyamu",
+    "yourFeatures": "Swihlawulekisi swa Wena swa Pro",
+    "manageSubscription": "Lawula Xikombelo",
+    "free": "Mahala",
+    "pro": "Pro",
+    "currentPlan": "Pulano ya Sweswi",
+    "recommended": "Yi Bumabumeriweke",
+    "upgradeNow": "Tlakusela Sweswi",
+    "perMonth": "/hi n'hweti",
+    "freeFeatures": {
+      "messages": "Marungula ya AI ya 5 hi siku",
+      "budget": "Ku landzela bajete ko toloveleka",
+      "savings": "Ku pulana swikongomelo swa ku hlayisa",
+      "score": "Tiphoyinti ta rihanyo ra timali"
+    },
+    "proFeatures": {
+      "unlimited": "Ku coachiwi ka AI ko ka heli",
+      "priority": "Tinhlamulo ta AI to hatlisa",
+      "analytics": "Nxopaxopo lowu ya emahlweni na vutivi",
+      "strategies": "Makungu ya ku hlayisa lama kongomeke",
+      "debt": "Mipulano yo antswisa swikweleti",
+      "export": "Humesa swiviko",
+      "support": "Mpfuno wo hatlisa"
+    }
+  },
+  "languageSelector": {
+    "label": "Ririmi"
+  }
+}
