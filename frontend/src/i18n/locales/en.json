@@ -1,0 +1,153 @@
+{
+  "common": {
+    "appName": "MaliMind AI",
+    "loading": "Loading...",
+    "loadingFinances": "Loading your finances...",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "save": "Save",
+    "signOut": "Sign Out",
+    "getStarted": "Get Started",
+    "goToDashboard": "Go to Dashboard",
+    "noCreditCard": "No credit card required",
+    "startFree": "Start Free Today"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "budget": "Budget",
+    "savings": "Savings",
+    "aiCoach": "AI Coach",
+    "premium": "Premium",
+    "profile": "Profile"
+  },
+  "landing": {
+    "tagline": "Built for Africa, by Africans",
+    "heroTitle": "Your AI Financial Coach",
+    "heroHighlight": "for Africa",
+    "heroDesc": "Build healthier financial habits with intelligent budgeting, savings planning, and personalized guidance — all tailored to the South African financial landscape.",
+    "features": {
+      "aiCoach": "AI Financial Coach",
+      "aiCoachDesc": "Personalized advice powered by AI that knows your budget, savings goals, and spending habits",
+      "smartBudget": "Smart Budgeting",
+      "smartBudgetDesc": "Track spending by category with real-time progress bars and overspending alerts",
+      "savingsGoals": "Savings Goals",
+      "savingsGoalsDesc": "Set targets with deadlines and get intelligent recommendations to reach them faster",
+      "healthScore": "Financial Health Score",
+      "healthScoreDesc": "Dynamic score that reflects your income, spending, savings rate, and debt health"
+    },
+    "stats": {
+      "paycheckStat": "of South Africans live paycheck to paycheck",
+      "priceStat": "/month for unlimited AI coaching",
+      "freeStat": "free AI messages daily"
+    },
+    "howItWorks": "How It Works",
+    "steps": {
+      "step1Title": "Set Your Budget",
+      "step1Desc": "Enter your income and create spending categories",
+      "step2Title": "Track & Save",
+      "step2Desc": "Log expenses and set savings goals with deadlines",
+      "step3Title": "Get AI Coaching",
+      "step3Desc": "Ask your AI coach for personalized financial advice"
+    },
+    "testimonial": "MaliMind helped me save R15,000 for my emergency fund in just 4 months. The AI coach keeps me accountable in a way no app ever has.",
+    "testimonialName": "Thandi M.",
+    "testimonialLocation": "Cape Town, South Africa",
+    "footer": "© 2024 MaliMind AI. Built by Neo Phukubye."
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "monthlyBudget": "Monthly Budget",
+    "totalSpent": "Total Spent",
+    "totalSavings": "Total Savings",
+    "financialScore": "Financial Score",
+    "smartInsights": "Smart Insights"
+  },
+  "budget": {
+    "title": "Budget Planner",
+    "logExpense": "Log an Expense",
+    "selectCategory": "Select category",
+    "amountR": "Amount (R)",
+    "logExpenseBtn": "Log Expense",
+    "totalBudget": "Total Budget",
+    "totalSpent": "Total Spent",
+    "remaining": "Remaining",
+    "monthlyIncome": "Monthly Income",
+    "enterIncome": "Enter your monthly income",
+    "categoryName": "Category name",
+    "budgetAmount": "Budget amount",
+    "addCategory": "Add Category",
+    "over": "(over!)"
+  },
+  "savings": {
+    "title": "Savings Goals",
+    "newGoal": "New Goal",
+    "totalProgress": "Total Savings Progress",
+    "goalPlaceholder": "Goal name (e.g., Emergency Fund)",
+    "targetAmount": "Target amount (R)",
+    "createGoal": "Create Goal",
+    "done": "Done!",
+    "complete": "complete",
+    "amount": "Amount",
+    "add": "+ Add",
+    "noGoals": "No savings goals yet. Create your first one!",
+    "createFirst": "Create Your First Goal",
+    "by": "By"
+  },
+  "coach": {
+    "title": "AI Financial Coach",
+    "greeting": "Hi! I'm your MaliMind AI financial coach. I can see your budget, savings goals, and financial health score — so my advice is personalized to your situation. What would you like help with today?",
+    "freeTier": "Free tier: {{used}}/{{max}} messages used.",
+    "upgradeToPro": "Upgrade to Pro",
+    "placeholder": "Ask your financial coach...",
+    "tryAsking": "Try asking:",
+    "limitReached": "You've reached your daily free message limit. Upgrade to Pro for unlimited coaching!",
+    "error": "Sorry, I couldn't process that. Please try again.",
+    "suggestions": {
+      "save": "How can I save more on my current income?",
+      "rule": "What's the 50/30/20 rule for my budget?",
+      "stokvel": "Should I join a stokvel or open a TFSA?",
+      "debt": "Help me create a debt repayment plan",
+      "emergency": "How much should my emergency fund be?",
+      "grocery": "Tips for reducing my grocery spending"
+    }
+  },
+  "profile": {
+    "title": "Profile",
+    "noEmail": "No email",
+    "memberSince": "Member since {{date}}"
+  },
+  "premium": {
+    "proTitle": "You're on MaliMind Pro!",
+    "upgradeTitle": "Upgrade to Pro",
+    "proDesc": "Enjoy unlimited AI financial coaching and premium features.",
+    "upgradeDesc": "Unlock the full power of AI-driven financial coaching.",
+    "proActive": "Pro Active",
+    "proAccess": "You have access to all premium features",
+    "yourFeatures": "Your Pro Features",
+    "manageSubscription": "Manage Subscription",
+    "free": "Free",
+    "pro": "Pro",
+    "currentPlan": "Current Plan",
+    "recommended": "Recommended",
+    "upgradeNow": "Upgrade Now",
+    "perMonth": "/month",
+    "freeFeatures": {
+      "messages": "5 AI messages per day",
+      "budget": "Basic budget tracking",
+      "savings": "Savings goal planning",
+      "score": "Financial health score"
+    },
+    "proFeatures": {
+      "unlimited": "Unlimited AI coaching",
+      "priority": "Priority AI responses",
+      "analytics": "Advanced analytics & insights",
+      "strategies": "Custom savings strategies",
+      "debt": "Debt optimization plans",
+      "export": "Export reports",
+      "support": "Priority support"
+    }
+  },
+  "languageSelector": {
+    "label": "Language"
+  }
+}
