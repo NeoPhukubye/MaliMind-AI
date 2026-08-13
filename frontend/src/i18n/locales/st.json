@@ -1,0 +1,153 @@
+{
+  "common": {
+    "appName": "MaliMind AI",
+    "loading": "E a laeha...",
+    "loadingFinances": "E laeha lichelete tsa hao...",
+    "cancel": "Hlakola",
+    "delete": "Hlakola",
+    "save": "Boloka",
+    "signOut": "Tsoa",
+    "getStarted": "Qala",
+    "goToDashboard": "Eya ho Dashboard",
+    "noCreditCard": "Ha ho hlokahale karete ea mokoloto",
+    "startFree": "Qala Mahala Kajeno"
+  },
+  "nav": {
+    "dashboard": "Dashibote",
+    "budget": "Bajete",
+    "savings": "Ho Boloka",
+    "aiCoach": "Mokoetlisi oa AI",
+    "premium": "Premium",
+    "profile": "Profaele"
+  },
+  "landing": {
+    "tagline": "E hahuoe bakeng sa Afrika, ke Maafrika",
+    "heroTitle": "Mokoetlisi oa Hao oa Lichelete oa AI",
+    "heroHighlight": "bakeng sa Afrika",
+    "heroDesc": "Haha mekhoa e metle ea lichelete ka ho rala bajete e bohlale, merero ea ho boloka, le tataiso e ikemetseng — tsohle li lokisetsoe maemo a lichelete a Afrika Boroa.",
+    "features": {
+      "aiCoach": "Mokoetlisi oa Lichelete oa AI",
+      "aiCoachDesc": "Keletso e ikemetseng e tsamaisoang ke AI e tsebang bajete ea hao, merero ea ho boloka, le mekhoa ea ho sebelisa chelete",
+      "smartBudget": "Ho Rala Bajete ho Bohlale",
+      "smartBudgetDesc": "Latela tšebeliso ea chelete ka mekhahlelo ka li-bara tse tsoelang pele le litsebiso tsa ho sebelisa ka ho fetisisa",
+      "savingsGoals": "Merero ea Ho Boloka",
+      "savingsGoalsDesc": "Beha merero e nang le linako tsa ho fela u fumane likeletso tse bohlale tsa ho e finyella ka potlako",
+      "healthScore": "Lintlha tsa Bophelo ba Lichelete",
+      "healthScoreDesc": "Lintlha tse fetohang tse bontšang moputso, tšebeliso, sekhahla sa ho boloka, le bophelo ba mokoloto"
+    },
+    "stats": {
+      "paycheckStat": "ea batho ba Afrika Boroa ba phela moputso ka moputso",
+      "priceStat": "/ka khoeli bakeng sa ho koetlisoa ha AI ho se nang moeli",
+      "freeStat": "melaetsa ea AI ea mahala ka letsatsi"
+    },
+    "howItWorks": "E Sebetsa Joang",
+    "steps": {
+      "step1Title": "Beha Bajete ea Hao",
+      "step1Desc": "Kenya moputso oa hao u etse mekhahlelo ea tšebeliso ea chelete",
+      "step2Title": "Latela & Boloka",
+      "step2Desc": "Ngola litšenyehelo u behe merero ea ho boloka e nang le linako",
+      "step3Title": "Fumana Ho Koetlisoa ke AI",
+      "step3Desc": "Botsa mokoetlisi oa hao oa AI keletso ea lichelete e ikemetseng"
+    },
+    "testimonial": "MaliMind e nthusitse ho boloka R15,000 bakeng sa letlole la ka la maemo a tšohanyetso ka likhoeli tse 'ne feela. Mokoetlisi oa AI o nkentse ke ikarabella ka tsela eo ha ho na app e kileng ea etsa.",
+    "testimonialName": "Thandi M.",
+    "testimonialLocation": "Motse Kapa, Afrika Boroa",
+    "footer": "© 2024 MaliMind AI. E hahuoe ke Neo Phukubye."
+  },
+  "dashboard": {
+    "title": "Dashibote",
+    "monthlyBudget": "Bajete ea Khoeli",
+    "totalSpent": "Kakaretso e Sebelisitsoeng",
+    "totalSavings": "Kakaretso e Bolokiloeng",
+    "financialScore": "Lintlha tsa Lichelete",
+    "smartInsights": "Kutloisiso e Bohlale"
+  },
+  "budget": {
+    "title": "Morali oa Bajete",
+    "logExpense": "Ngola Tšenyehelo",
+    "selectCategory": "Khetha mokhahlelo",
+    "amountR": "Chelete (R)",
+    "logExpenseBtn": "Ngola Tšenyehelo",
+    "totalBudget": "Bajete Eohle",
+    "totalSpent": "Kakaretso e Sebelisitsoeng",
+    "remaining": "E Setseng",
+    "monthlyIncome": "Moputso oa Khoeli",
+    "enterIncome": "Kenya moputso oa hao oa khoeli",
+    "categoryName": "Lebitso la mokhahlelo",
+    "budgetAmount": "Chelete ea bajete",
+    "addCategory": "Kenya Mokhahlelo",
+    "over": "(ho feta!)"
+  },
+  "savings": {
+    "title": "Merero ea Ho Boloka",
+    "newGoal": "Morero o Mocha",
+    "totalProgress": "Tsoelo-pele Eohle ea Ho Boloka",
+    "goalPlaceholder": "Lebitso la morero (mohl., Letlole la Maemo a Tšohanyetso)",
+    "targetAmount": "Chelete e reretsoeng (R)",
+    "createGoal": "Theha Morero",
+    "done": "Ho Phethiloe!",
+    "complete": "e phethiloe",
+    "amount": "Chelete",
+    "add": "+ Kenya",
+    "noGoals": "Ha ho na merero ea ho boloka hajoale. Theha oa hao oa pele!",
+    "createFirst": "Theha Morero oa Hao oa Pele",
+    "by": "Ka"
+  },
+  "coach": {
+    "title": "Mokoetlisi oa Lichelete oa AI",
+    "greeting": "Lumela! Ke mokoetlisi oa hao oa lichelete oa MaliMind AI. Ke khona ho bona bajete ea hao, merero ea ho boloka, le lintlha tsa bophelo ba lichelete — kahoo keletso ea ka e lokisetsoe maemo a hao. U batla ho thusoa ka eng kajeno?",
+    "freeTier": "Mokhahlelo oa mahala: {{used}}/{{max}} melaetsa e sebelisitsoeng.",
+    "upgradeToPro": "Nyolosetsa ho Pro",
+    "placeholder": "Botsa mokoetlisi oa hao oa lichelete...",
+    "tryAsking": "Leka ho botsa:",
+    "limitReached": "U fihlile moeling oa melaetsa ea mahala ea letsatsi. Nyolosetsa ho Pro bakeng sa ho koetlisoa ho se nang moeli!",
+    "error": "Ke kopa tšoarelo, ke sitoa ho araba seo. Ka kopo leka hape.",
+    "suggestions": {
+      "save": "Nka boloka joang ho feta ka moputso oa ka?",
+      "rule": "Molao oa 50/30/20 ke ofe bakeng sa bajete ea ka?",
+      "stokvel": "Na ke lokela ho kena stokfeleng kapa ho bula TFSA?",
+      "debt": "Nthuse ho theha moralo oa ho lefa mekoloto",
+      "emergency": "Na letlole la ka la maemo a tšohanyetso le lokela ho ba bokae?",
+      "grocery": "Maele a ho fokotsa tšebeliso ea chelete ea lijo"
+    }
+  },
+  "profile": {
+    "title": "Profaele",
+    "noEmail": "Ha ho na imeile",
+    "memberSince": "Setho ho tloha {{date}}"
+  },
+  "premium": {
+    "proTitle": "U ho MaliMind Pro!",
+    "upgradeTitle": "Nyolosetsa ho Pro",
+    "proDesc": "Thabela ho koetlisoa ha lichelete ha AI ho se nang moeli le likarolo tsa premium.",
+    "upgradeDesc": "Bula matla a feletseng a ho koetlisoa ha lichelete ho tsamaisoang ke AI.",
+    "proActive": "Pro E a Sebetsa",
+    "proAccess": "U na le phihlello ho likarolo tsohle tsa premium",
+    "yourFeatures": "Likarolo Tsa Hao tsa Pro",
+    "manageSubscription": "Laola Setifikeiti",
+    "free": "Mahala",
+    "pro": "Pro",
+    "currentPlan": "Moralo oa Hajoale",
+    "recommended": "E Khothaletsoang",
+    "upgradeNow": "Nyolosetsa Joale",
+    "perMonth": "/ka khoeli",
+    "freeFeatures": {
+      "messages": "Melaetsa ea AI e 5 ka letsatsi",
+      "budget": "Ho latela bajete ho tloaelehileng",
+      "savings": "Ho rala merero ea ho boloka",
+      "score": "Lintlha tsa bophelo ba lichelete"
+    },
+    "proFeatures": {
+      "unlimited": "Ho koetlisoa ha AI ho se nang moeli",
+      "priority": "Likarabo tsa AI tse potlakileng",
+      "analytics": "Tlhahlobo e tsoetseng pele le kutloisiso",
+      "strategies": "Maano a ho boloka a ikhethileng",
+      "debt": "Merero ea ho ntlafatsa mekoloto",
+      "export": "Romela litlaleho",
+      "support": "Tšehetso e potlakileng"
+    }
+  },
+  "languageSelector": {
+    "label": "Puo"
+  }
+}

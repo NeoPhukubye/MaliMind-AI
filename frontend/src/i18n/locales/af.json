@@ -1,0 +1,153 @@
+{
+  "common": {
+    "appName": "MaliMind AI",
+    "loading": "Laai...",
+    "loadingFinances": "Laai jou finansies...",
+    "cancel": "Kanselleer",
+    "delete": "Verwyder",
+    "save": "Stoor",
+    "signOut": "Teken Uit",
+    "getStarted": "Begin",
+    "goToDashboard": "Gaan na Paneelbord",
+    "noCreditCard": "Geen kredietkaart nodig nie",
+    "startFree": "Begin Vandag Gratis"
+  },
+  "nav": {
+    "dashboard": "Paneelbord",
+    "budget": "Begroting",
+    "savings": "Spaar",
+    "aiCoach": "KI-Afrigter",
+    "premium": "Premie",
+    "profile": "Profiel"
+  },
+  "landing": {
+    "tagline": "Gebou vir Afrika, deur Afrikane",
+    "heroTitle": "Jou KI Finansiële Afrigter",
+    "heroHighlight": "vir Afrika",
+    "heroDesc": "Bou gesonder finansiële gewoontes met intelligente begrotingsbeplanning, spaarplanne, en persoonlike leiding — alles aangepas vir die Suid-Afrikaanse finansiële landskap.",
+    "features": {
+      "aiCoach": "KI Finansiële Afrigter",
+      "aiCoachDesc": "Persoonlike advies aangedryf deur KI wat jou begroting, spaardoelwitte, en bestedingsgewoontes ken",
+      "smartBudget": "Slim Begrotingsbeplanning",
+      "smartBudgetDesc": "Volg besteding per kategorie met intydse vorderingsbalke en oorbestedingswaarskuwings",
+      "savingsGoals": "Spaardoelwitte",
+      "savingsGoalsDesc": "Stel teikens met sperdatums en kry intelligente aanbevelings om vinniger daar te kom",
+      "healthScore": "Finansiële Gesondheidstelling",
+      "healthScoreDesc": "Dinamiese telling wat jou inkomste, besteding, spaarkoers, en skuldgesondheid weerspieël"
+    },
+    "stats": {
+      "paycheckStat": "van Suid-Afrikaners leef van salaris tot salaris",
+      "priceStat": "/maand vir onbeperkte KI-afrigting",
+      "freeStat": "gratis KI-boodskappe daagliks"
+    },
+    "howItWorks": "Hoe Dit Werk",
+    "steps": {
+      "step1Title": "Stel Jou Begroting",
+      "step1Desc": "Voer jou inkomste in en skep bestedingskategorieë",
+      "step2Title": "Volg & Spaar",
+      "step2Desc": "Teken uitgawes aan en stel spaardoelwitte met sperdatums",
+      "step3Title": "Kry KI-Afrigting",
+      "step3Desc": "Vra jou KI-afrigter vir persoonlike finansiële advies"
+    },
+    "testimonial": "MaliMind het my gehelp om R15 000 vir my noodfonds te spaar in net 4 maande. Die KI-afrigter hou my verantwoordelik op 'n manier wat geen app nog ooit gedoen het nie.",
+    "testimonialName": "Thandi M.",
+    "testimonialLocation": "Kaapstad, Suid-Afrika",
+    "footer": "© 2024 MaliMind AI. Gebou deur Neo Phukubye."
+  },
+  "dashboard": {
+    "title": "Paneelbord",
+    "monthlyBudget": "Maandelikse Begroting",
+    "totalSpent": "Totaal Bestee",
+    "totalSavings": "Totale Spaar",
+    "financialScore": "Finansiële Telling",
+    "smartInsights": "Slim Insigte"
+  },
+  "budget": {
+    "title": "Begrotingsbeplanner",
+    "logExpense": "Teken 'n Uitgawe Aan",
+    "selectCategory": "Kies kategorie",
+    "amountR": "Bedrag (R)",
+    "logExpenseBtn": "Teken Uitgawe Aan",
+    "totalBudget": "Totale Begroting",
+    "totalSpent": "Totaal Bestee",
+    "remaining": "Oorblywend",
+    "monthlyIncome": "Maandelikse Inkomste",
+    "enterIncome": "Voer jou maandelikse inkomste in",
+    "categoryName": "Kategorienaam",
+    "budgetAmount": "Begrotingsbedrag",
+    "addCategory": "Voeg Kategorie By",
+    "over": "(oor!)"
+  },
+  "savings": {
+    "title": "Spaardoelwitte",
+    "newGoal": "Nuwe Doelwit",
+    "totalProgress": "Totale Spaarvordering",
+    "goalPlaceholder": "Doelwitnaam (bv., Noodfonds)",
+    "targetAmount": "Teikenbedrag (R)",
+    "createGoal": "Skep Doelwit",
+    "done": "Klaar!",
+    "complete": "voltooi",
+    "amount": "Bedrag",
+    "add": "+ Voeg By",
+    "noGoals": "Nog geen spaardoelwitte nie. Skep jou eerste een!",
+    "createFirst": "Skep Jou Eerste Doelwit",
+    "by": "Teen"
+  },
+  "coach": {
+    "title": "KI Finansiële Afrigter",
+    "greeting": "Hallo! Ek is jou MaliMind AI finansiële afrigter. Ek kan jou begroting, spaardoelwitte, en finansiële gesondheidstelling sien — so my advies is persoonlik vir jou situasie. Waarmee kan ek jou vandag help?",
+    "freeTier": "Gratis vlak: {{used}}/{{max}} boodskappe gebruik.",
+    "upgradeToPro": "Gradeer op na Pro",
+    "placeholder": "Vra jou finansiële afrigter...",
+    "tryAsking": "Probeer vra:",
+    "limitReached": "Jy het jou daaglikse gratis boodskaplimiet bereik. Gradeer op na Pro vir onbeperkte afrigting!",
+    "error": "Jammer, ek kon dit nie verwerk nie. Probeer asseblief weer.",
+    "suggestions": {
+      "save": "Hoe kan ek meer spaar met my huidige inkomste?",
+      "rule": "Wat is die 50/30/20-reël vir my begroting?",
+      "stokvel": "Moet ek by 'n stokvel aansluit of 'n TFSA open?",
+      "debt": "Help my om 'n skuldterugbetalingsplan te skep",
+      "emergency": "Hoeveel moet my noodfonds wees?",
+      "grocery": "Wenke om my kruideniersbesteding te verminder"
+    }
+  },
+  "profile": {
+    "title": "Profiel",
+    "noEmail": "Geen e-pos",
+    "memberSince": "Lid sedert {{date}}"
+  },
+  "premium": {
+    "proTitle": "Jy is op MaliMind Pro!",
+    "upgradeTitle": "Gradeer op na Pro",
+    "proDesc": "Geniet onbeperkte KI finansiële afrigting en premie-kenmerke.",
+    "upgradeDesc": "Ontsluit die volle krag van KI-gedrewe finansiële afrigting.",
+    "proActive": "Pro Aktief",
+    "proAccess": "Jy het toegang tot alle premie-kenmerke",
+    "yourFeatures": "Jou Pro-kenmerke",
+    "manageSubscription": "Bestuur Intekening",
+    "free": "Gratis",
+    "pro": "Pro",
+    "currentPlan": "Huidige Plan",
+    "recommended": "Aanbeveel",
+    "upgradeNow": "Gradeer Nou Op",
+    "perMonth": "/maand",
+    "freeFeatures": {
+      "messages": "5 KI-boodskappe per dag",
+      "budget": "Basiese begrotingsopsporing",
+      "savings": "Spaardoelwitbeplanning",
+      "score": "Finansiële gesondheidstelling"
+    },
+    "proFeatures": {
+      "unlimited": "Onbeperkte KI-afrigting",
+      "priority": "Prioriteit KI-antwoorde",
+      "analytics": "Gevorderde analise & insigte",
+      "strategies": "Pasgemaakte spaarstrategieë",
+      "debt": "Skuldoptimaliseringsplanne",
+      "export": "Voer verslae uit",
+      "support": "Prioriteit-ondersteuning"
+    }
+  },
+  "languageSelector": {
+    "label": "Taal"
+  }
+}

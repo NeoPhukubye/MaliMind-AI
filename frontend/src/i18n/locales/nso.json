@@ -1,0 +1,153 @@
+{
+  "common": {
+    "appName": "MaliMind AI",
+    "loading": "E a hlahlela...",
+    "loadingFinances": "E hlahlela ditšhelete tša gago...",
+    "cancel": "Khansela",
+    "delete": "Phumula",
+    "save": "Boloka",
+    "signOut": "Tšwa",
+    "getStarted": "Thoma",
+    "goToDashboard": "Eya go Dashboard",
+    "noCreditCard": "Ga go nyakege karata ya sekoloto",
+    "startFree": "Thoma Mahala Lehono"
+  },
+  "nav": {
+    "dashboard": "Dashibote",
+    "budget": "Tekanyetšo",
+    "savings": "Go Boloka",
+    "aiCoach": "Morutiši wa AI",
+    "premium": "Premium",
+    "profile": "Profaele"
+  },
+  "landing": {
+    "tagline": "E agilwe go Afrika, ke Maafrika",
+    "heroTitle": "Morutiši wa Gago wa Ditšhelete wa AI",
+    "heroHighlight": "wa Afrika",
+    "heroDesc": "Aga mekgwa e mebotse ya ditšhelete ka go beakanya tekanyetšo e bohlale, merero ya go boloka, le tlhahli e rilego — ka moka di lokišeditšwe maemo a ditšhelete a Afrika Borwa.",
+    "features": {
+      "aiCoach": "Morutiši wa Ditšhelete wa AI",
+      "aiCoachDesc": "Keletšo e rilego e laolwago ke AI e tsebago tekanyetšo ya gago, merero ya go boloka, le mekgwa ya go šomiša ditšhelete",
+      "smartBudget": "Go Beakanya Tekanyetšo go go Bohlale",
+      "smartBudgetDesc": "Latela tšhomišo ya ditšhelete ka dikarolo ka dibara tša go tšwela pele le ditsebišo tša go šomiša kudu",
+      "savingsGoals": "Merero ya Go Boloka",
+      "savingsGoalsDesc": "Bea merero e nago le dinako tša mafelelo o hwetše dikeletšo tše bohlale go e fihlelela ka lebelo",
+      "healthScore": "Maduo a Maphelo a Ditšhelete",
+      "healthScoreDesc": "Maduo a fetogago a bontšhago letseno, tšhomišo, seelo sa go boloka, le maphelo a sekoloto"
+    },
+    "stats": {
+      "paycheckStat": "ya batho ba Afrika Borwa ba phela moputso ka moputso",
+      "priceStat": "/ka kgwedi ya go rutwa ke AI go sa lekanyetšwago",
+      "freeStat": "melaetša ya AI ya mahala ka letšatši"
+    },
+    "howItWorks": "E Šoma Bjang",
+    "steps": {
+      "step1Title": "Bea Tekanyetšo ya Gago",
+      "step1Desc": "Tsenya letseno la gago o dire dikarolo tša tšhomišo ya ditšhelete",
+      "step2Title": "Latela & Boloka",
+      "step2Desc": "Ngwala ditshenyagalelo o beye merero ya go boloka e nago le dinako",
+      "step3Title": "Hwetša go Rutwa ke AI",
+      "step3Desc": "Botšiša morutiši wa gago wa AI keletšo ya ditšhelete e rilego"
+    },
+    "testimonial": "MaliMind e nthušitše go boloka R15,000 ya letlole la ka la maemo a tšhoganyetšo ka dikgwedi tše nne fela. Morutiši wa AI o ntšhwara ke ikarabela ka tsela e e sego ya ka ya ba gona ka app.",
+    "testimonialName": "Thandi M.",
+    "testimonialLocation": "Motse Kapa, Afrika Borwa",
+    "footer": "© 2024 MaliMind AI. E agilwe ke Neo Phukubye."
+  },
+  "dashboard": {
+    "title": "Dashibote",
+    "monthlyBudget": "Tekanyetšo ya Kgwedi",
+    "totalSpent": "Palomoka e Šomišitšwego",
+    "totalSavings": "Palomoka e Bolokilwego",
+    "financialScore": "Maduo a Ditšhelete",
+    "smartInsights": "Tsebo e Bohlale"
+  },
+  "budget": {
+    "title": "Mobeakanyi wa Tekanyetšo",
+    "logExpense": "Ngwala Tshenyagalelo",
+    "selectCategory": "Kgetha karolo",
+    "amountR": "Ditšhelete (R)",
+    "logExpenseBtn": "Ngwala Tshenyagalelo",
+    "totalBudget": "Tekanyetšo ka Moka",
+    "totalSpent": "Palomoka e Šomišitšwego",
+    "remaining": "E Šetšego",
+    "monthlyIncome": "Letseno la Kgwedi",
+    "enterIncome": "Tsenya letseno la gago la kgwedi",
+    "categoryName": "Leina la karolo",
+    "budgetAmount": "Ditšhelete tša tekanyetšo",
+    "addCategory": "Oketša Karolo",
+    "over": "(go feta!)"
+  },
+  "savings": {
+    "title": "Merero ya Go Boloka",
+    "newGoal": "Morero o Mofsa",
+    "totalProgress": "Tšwelopele ka Moka ya Go Boloka",
+    "goalPlaceholder": "Leina la morero (mohl., Letlole la Maemo a Tšhoganyetšo)",
+    "targetAmount": "Ditšhelete tše lebeletšwego (R)",
+    "createGoal": "Hlama Morero",
+    "done": "Go Phethilwe!",
+    "complete": "go phethilwe",
+    "amount": "Ditšhelete",
+    "add": "+ Oketša",
+    "noGoals": "Ga go na merero ya go boloka ga bjale. Hlama wa gago wa mathomo!",
+    "createFirst": "Hlama Morero wa Gago wa Mathomo",
+    "by": "Ka"
+  },
+  "coach": {
+    "title": "Morutiši wa Ditšhelete wa AI",
+    "greeting": "Thobela! Ke morutiši wa gago wa ditšhelete wa MaliMind AI. Ke kgona go bona tekanyetšo ya gago, merero ya go boloka, le maduo a maphelo a ditšhelete — ka gona keletšo ya ka e lokišeditšwe maemo a gago. O nyaka go thušwa ka eng lehono?",
+    "freeTier": "Seelo sa mahala: {{used}}/{{max}} melaetša e šomišitšwego.",
+    "upgradeToPro": "Godiša go Pro",
+    "placeholder": "Botšiša morutiši wa gago wa ditšhelete...",
+    "tryAsking": "Leka go botšiša:",
+    "limitReached": "O fihleletše molelwane wa melaetša ya mahala ya letšatši. Godiša go Pro go hwetša go rutwa go sa lekanyetšwago!",
+    "error": "Ke maswabi, ga ke a kgona go araba seo. Hle leka gape.",
+    "suggestions": {
+      "save": "Nka boloka bjang go feta ka letseno la ka?",
+      "rule": "Molao wa 50/30/20 ke ofe wa tekanyetšo ya ka?",
+      "stokvel": "A ke swanetše go tsena stokfeleng goba go bula TFSA?",
+      "debt": "Nthušhe go hlama lenaneo la go lefela dikoloto",
+      "emergency": "Letlole la ka la maemo a tšhoganyetšo le swanetše go ba bokae?",
+      "grocery": "Maele a go fokotša tšhomišo ya ditšhelete tša dijo"
+    }
+  },
+  "profile": {
+    "title": "Profaele",
+    "noEmail": "Ga go na imeile",
+    "memberSince": "Leloko go tloga {{date}}"
+  },
+  "premium": {
+    "proTitle": "O go MaliMind Pro!",
+    "upgradeTitle": "Godiša go Pro",
+    "proDesc": "Ipshine ka go rutwa ga ditšhelete ga AI go sa lekanyetšwago le dikarolo tša premium.",
+    "upgradeDesc": "Bula maatla a feleletšego a go rutwa ga ditšhelete go laolwago ke AI.",
+    "proActive": "Pro E a Šoma",
+    "proAccess": "O na le phihlelelo go dikarolo ka moka tša premium",
+    "yourFeatures": "Dikarolo Tša Gago tša Pro",
+    "manageSubscription": "Laola Tokelo ya go Tsena",
+    "free": "Mahala",
+    "pro": "Pro",
+    "currentPlan": "Lenaneo la Ga Bjale",
+    "recommended": "E Kgothaletšwago",
+    "upgradeNow": "Godiša Bjale",
+    "perMonth": "/ka kgwedi",
+    "freeFeatures": {
+      "messages": "Melaetša ya AI e 5 ka letšatši",
+      "budget": "Go latela tekanyetšo go go tlwaelegilego",
+      "savings": "Go beakanya merero ya go boloka",
+      "score": "Maduo a maphelo a ditšhelete"
+    },
+    "proFeatures": {
+      "unlimited": "Go rutwa ga AI go sa lekanyetšwago",
+      "priority": "Dikarabo tša AI tše potlakilego",
+      "analytics": "Tshekatsheko e tšwetšego pele le tsebo",
+      "strategies": "Maano a go boloka a rilego",
+      "debt": "Mananeo a go kaonafatša dikoloto",
+      "export": "Romela dipego",
+      "support": "Thekgo e potlakilego"
+    }
+  },
+  "languageSelector": {
+    "label": "Polelo"
+  }
+}

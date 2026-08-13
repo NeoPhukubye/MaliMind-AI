@@ -1,0 +1,153 @@
+{
+  "common": {
+    "appName": "MaliMind AI",
+    "loading": "E a tsenya...",
+    "loadingFinances": "E tsenya madi a gago...",
+    "cancel": "Khansela",
+    "delete": "Phimola",
+    "save": "Boloka",
+    "signOut": "Tswa",
+    "getStarted": "Simolola",
+    "goToDashboard": "Ya kwa Dashboard",
+    "noCreditCard": "Ga go tlhokege karata ya sekoloto",
+    "startFree": "Simolola Mahala Gompieno"
+  },
+  "nav": {
+    "dashboard": "Dashibote",
+    "budget": "Tekanyetso",
+    "savings": "Go Boloka",
+    "aiCoach": "Mokatisi wa AI",
+    "premium": "Premium",
+    "profile": "Porofaele"
+  },
+  "landing": {
+    "tagline": "E agilwe go Afrika, ke Maaferika",
+    "heroTitle": "Mokatisi wa Gago wa Madi wa AI",
+    "heroHighlight": "wa Afrika",
+    "heroDesc": "Aga mekgwa e e siameng ya madi ka go balelela tekanyetso e e botlhale, merero ya go boloka, le kaelo e e rileng — tsotlhe di rulaganyeditswe maemo a madi a Aforika Borwa.",
+    "features": {
+      "aiCoach": "Mokatisi wa Madi wa AI",
+      "aiCoachDesc": "Kgakololo e e rileng e e tsamaisiwang ke AI e e itseng tekanyetso ya gago, merero ya go boloka, le mekgwa ya go dirisa madi",
+      "smartBudget": "Go Balelela Tekanyetso go go Botlhale",
+      "smartBudgetDesc": "Latela tiriso ya madi ka dikarolo ka dibara tse di tswelelang le dikitsiso tsa go dirisa thata",
+      "savingsGoals": "Merero ya Go Boloka",
+      "savingsGoalsDesc": "Baya merero e e nang le dinako tsa bofelo o bone dikgakololo tse di botlhale go e fitlhelela ka bonako",
+      "healthScore": "Maduo a Boitekanelo jwa Madi",
+      "healthScoreDesc": "Maduo a a fetogago a a bontshang lotseno, tiriso, seelo sa go boloka, le boitekanelo jwa sekoloto"
+    },
+    "stats": {
+      "paycheckStat": "ya batho ba Aforika Borwa ba tshela tuelo ka tuelo",
+      "priceStat": "/ka kgwedi ya go katisiwa ke AI go go sa lekanyetswang",
+      "freeStat": "melaetsa ya AI ya mahala ka letsatsi"
+    },
+    "howItWorks": "E Bereka Jang",
+    "steps": {
+      "step1Title": "Baya Tekanyetso ya Gago",
+      "step1Desc": "Tsenya lotseno la gago o dire dikarolo tsa tiriso ya madi",
+      "step2Title": "Latela & Boloka",
+      "step2Desc": "Kwala ditshenyegelo o beye merero ya go boloka e e nang le dinako",
+      "step3Title": "Bona Go Katisiwa ke AI",
+      "step3Desc": "Botsa mokatisi wa gago wa AI kgakololo ya madi e e rileng"
+    },
+    "testimonial": "MaliMind e nthusitse go boloka R15,000 ya letlole la ka la maemo a tshoganyetso ka dikgwedi tse nne fela. Mokatisi wa AI o ntshwara ke ikarabela ka tsela e e iseng e nne teng ka app.",
+    "testimonialName": "Thandi M.",
+    "testimonialLocation": "Motse Kapa, Aforika Borwa",
+    "footer": "© 2024 MaliMind AI. E agilwe ke Neo Phukubye."
+  },
+  "dashboard": {
+    "title": "Dashibote",
+    "monthlyBudget": "Tekanyetso ya Kgwedi",
+    "totalSpent": "Palogotlhe e e Dirisitsweng",
+    "totalSavings": "Palogotlhe e e Bolokilweng",
+    "financialScore": "Maduo a Madi",
+    "smartInsights": "Kitso e e Botlhale"
+  },
+  "budget": {
+    "title": "Mobaleledi wa Tekanyetso",
+    "logExpense": "Kwala Tshenyegelo",
+    "selectCategory": "Tlhopha karolo",
+    "amountR": "Madi (R)",
+    "logExpenseBtn": "Kwala Tshenyegelo",
+    "totalBudget": "Tekanyetso Yotlhe",
+    "totalSpent": "Palogotlhe e e Dirisitsweng",
+    "remaining": "E e Setseng",
+    "monthlyIncome": "Lotseno la Kgwedi",
+    "enterIncome": "Tsenya lotseno la gago la kgwedi",
+    "categoryName": "Leina la karolo",
+    "budgetAmount": "Madi a tekanyetso",
+    "addCategory": "Oketsa Karolo",
+    "over": "(go feta!)"
+  },
+  "savings": {
+    "title": "Merero ya Go Boloka",
+    "newGoal": "Morero o Mosha",
+    "totalProgress": "Kgatelopele Yotlhe ya Go Boloka",
+    "goalPlaceholder": "Leina la morero (sk., Letlole la Maemo a Tshoganyetso)",
+    "targetAmount": "Madi a a lebilweng (R)",
+    "createGoal": "Dira Morero",
+    "done": "Go Feditswe!",
+    "complete": "go feditswe",
+    "amount": "Madi",
+    "add": "+ Oketsa",
+    "noGoals": "Ga go na merero ya go boloka ga jaanong. Dira wa gago wa ntlha!",
+    "createFirst": "Dira Morero wa Gago wa Ntlha",
+    "by": "Ka"
+  },
+  "coach": {
+    "title": "Mokatisi wa Madi wa AI",
+    "greeting": "Dumela! Ke mokatisi wa gago wa madi wa MaliMind AI. Ke kgona go bona tekanyetso ya gago, merero ya go boloka, le maduo a boitekanelo jwa madi — ka jalo kgakololo ya me e rulaganyeditswe maemo a gago. O batla go thusiwa ka eng gompieno?",
+    "freeTier": "Seelo sa mahala: {{used}}/{{max}} melaetsa e e dirisitsweng.",
+    "upgradeToPro": "Godisa go Pro",
+    "placeholder": "Botsa mokatisi wa gago wa madi...",
+    "tryAsking": "Leka go botsa:",
+    "limitReached": "O fitlhetse molelwane wa melaetsa ya mahala ya letsatsi. Godisa go Pro go bona go katisiwa go go sa lekanyetswang!",
+    "error": "Intshwarele, ga ke a kgona go araba seo. Tswee-tswee leka gape.",
+    "suggestions": {
+      "save": "Nka boloka jang go feta ka lotseno la me?",
+      "rule": "Molao wa 50/30/20 ke eng wa tekanyetso ya me?",
+      "stokvel": "A ke tshwanetse go tsena stokfeleng kgotsa go bula TFSA?",
+      "debt": "Nthuse go dira lenaneo la go duela dikoloto",
+      "emergency": "Letlole la me la maemo a tshoganyetso le tshwanetse go nna bokae?",
+      "grocery": "Maele a go fokotsa tiriso ya madi a dijo"
+    }
+  },
+  "profile": {
+    "title": "Porofaele",
+    "noEmail": "Ga go na imeile",
+    "memberSince": "Leloko go tloga {{date}}"
+  },
+  "premium": {
+    "proTitle": "O mo MaliMind Pro!",
+    "upgradeTitle": "Godisa go Pro",
+    "proDesc": "Itumelele go katisiwa ga madi ga AI go go sa lekanyetswang le dikarolo tsa premium.",
+    "upgradeDesc": "Bula maatla a a feletseng a go katisiwa ga madi go go tsamaisiwang ke AI.",
+    "proActive": "Pro E a Bereka",
+    "proAccess": "O na le phitlhelelo go dikarolo tsotlhe tsa premium",
+    "yourFeatures": "Dikarolo Tsa Gago tsa Pro",
+    "manageSubscription": "Laola Tokelo ya go Tsena",
+    "free": "Mahala",
+    "pro": "Pro",
+    "currentPlan": "Lenaneo la Ga Jaana",
+    "recommended": "E e Atlenegiwang",
+    "upgradeNow": "Godisa Jaanong",
+    "perMonth": "/ka kgwedi",
+    "freeFeatures": {
+      "messages": "Melaetsa ya AI e 5 ka letsatsi",
+      "budget": "Go latela tekanyetso go go tlwaelegileng",
+      "savings": "Go balelela merero ya go boloka",
+      "score": "Maduo a boitekanelo jwa madi"
+    },
+    "proFeatures": {
+      "unlimited": "Go katisiwa ga AI go go sa lekanyetswang",
+      "priority": "Dikarabo tsa AI tse di potlakileng",
+      "analytics": "Tshekatsheko e e tsweletseng le kitso",
+      "strategies": "Maano a go boloka a a rileng",
+      "debt": "Mananeo a go tokafatsa dikoloto",
+      "export": "Romela dipego",
+      "support": "Tshegetso e e potlakileng"
+    }
+  },
+  "languageSelector": {
+    "label": "Puo"
+  }
+}
