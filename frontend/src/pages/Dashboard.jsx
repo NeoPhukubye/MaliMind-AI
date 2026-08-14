@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { TrendingUp, Wallet, PiggyBank, AlertCircle, Lightbulb, AlertTriangle, CheckCircle } from 'lucide-react'
 import { api } from '../services/api'
 import StatCard from '../components/dashboard/StatCard'
@@ -20,6 +21,7 @@ const insightColors = {
 export default function Dashboard() {
   const [stats, setStats] = useState(null)
   const [loading, setLoading] = useState(true)
+  const { t } = useTranslation()
 
   useEffect(() => {
     async function fetchDashboard() {
@@ -47,7 +49,7 @@ export default function Dashboard() {
       <div className="flex items-center justify-center h-64">
         <div className="animate-pulse flex flex-col items-center gap-3">
           <div className="w-10 h-10 bg-primary-200 rounded-full animate-bounce" />
-          <p className="text-gray-500">Loading your finances...</p>
+          <p className="text-gray-500">{t('common.loadingFinances')}</p>
         </div>
       </div>
     )
@@ -56,23 +58,22 @@ export default function Dashboard() {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">Dashboard</h1>
+        <h1 className="text-2xl font-bold">{t('dashboard.title')}</h1>
         <p className="text-sm text-gray-500">
-          {new Date().toLocaleDateString('en-ZA', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+          {new Date().toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <StatCard icon={Wallet} label="Monthly Budget" value={`R${stats.totalBudget.toLocaleString()}`} color="blue" />
-        <StatCard icon={AlertCircle} label="Total Spent" value={`R${stats.totalSpent.toLocaleString()}`} color="red" />
-        <StatCard icon={PiggyBank} label="Total Savings" value={`R${stats.totalSavings.toLocaleString()}`} color="green" />
-        <StatCard icon={TrendingUp} label="Financial Score" value={`${stats.financialScore}/100`} color="yellow" />
+        <StatCard icon={Wallet} label={t('dashboard.monthlyBudget')} value={`R${stats.totalBudget.toLocaleString()}`} color="blue" />
+        <StatCard icon={AlertCircle} label={t('dashboard.totalSpent')} value={`R${stats.totalSpent.toLocaleString()}`} color="red" />
+        <StatCard icon={PiggyBank} label={t('dashboard.totalSavings')} value={`R${stats.totalSavings.toLocaleString()}`} color="green" />
+        <StatCard icon={TrendingUp} label={t('dashboard.financialScore')} value={`${stats.financialScore}/100`} color="yellow" />
       </div>
 
-      {/* AI Insights */}
       {stats.insights && stats.insights.length > 0 && (
         <div className="space-y-3">
-          <h2 className="text-lg font-semibold text-gray-700">Smart Insights</h2>
+          <h2 className="text-lg font-semibold text-gray-700">{t('dashboard.smartInsights')}</h2>
           <div className="grid gap-3 md:grid-cols-2">
             {stats.insights.map((insight, idx) => {
               const Icon = insightIcons[insight.type] || Lightbulb
