@@ -1,16 +1,20 @@
 import { Outlet, NavLink } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { LayoutDashboard, Wallet, PiggyBank, MessageSquare, User, Crown } from 'lucide-react'
-
-const navItems = [
-  { to: '/app', icon: LayoutDashboard, label: 'Dashboard', end: true },
-  { to: '/app/budget', icon: Wallet, label: 'Budget' },
-  { to: '/app/savings', icon: PiggyBank, label: 'Savings' },
-  { to: '/app/coach', icon: MessageSquare, label: 'AI Coach' },
-  { to: '/app/premium', icon: Crown, label: 'Premium' },
-  { to: '/app/profile', icon: User, label: 'Profile' },
-]
+import LanguageSelector from './LanguageSelector'
 
 export default function Layout() {
+  const { t } = useTranslation()
+
+  const navItems = [
+    { to: '/app', icon: LayoutDashboard, label: t('nav.dashboard'), end: true },
+    { to: '/app/budget', icon: Wallet, label: t('nav.budget') },
+    { to: '/app/savings', icon: PiggyBank, label: t('nav.savings') },
+    { to: '/app/coach', icon: MessageSquare, label: t('nav.aiCoach') },
+    { to: '/app/premium', icon: Crown, label: t('nav.premium') },
+    { to: '/app/profile', icon: User, label: t('nav.profile') },
+  ]
+
   return (
     <div className="min-h-screen flex">
       <aside className="w-64 bg-white border-r hidden md:flex flex-col">
@@ -34,11 +38,16 @@ export default function Layout() {
             </NavLink>
           ))}
         </nav>
+        <div className="p-4 border-t">
+          <LanguageSelector />
+        </div>
       </aside>
 
       <div className="flex-1 flex flex-col">
-        <header className="h-16 border-b bg-white flex items-center px-6 md:hidden">
-          <h1 className="text-lg font-bold text-primary-700">MaliMind AI</h1>
+        <header className="h-16 border-b bg-white flex items-center justify-between px-6">
+          <h1 className="text-lg font-bold text-primary-700 md:hidden">MaliMind AI</h1>
+          <div className="hidden md:block" />
+          <LanguageSelector />
         </header>
         <main className="flex-1 p-6 bg-gray-50 overflow-y-auto">
           <Outlet />
