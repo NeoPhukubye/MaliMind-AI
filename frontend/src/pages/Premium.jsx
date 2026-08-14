@@ -1,30 +1,32 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Crown, Check, MessageCircle, BarChart3, Sparkles } from 'lucide-react'
 import { useRevenueCat } from '../hooks/useRevenueCat'
 import Paywall from '../components/paywall/Paywall'
 import CustomerCenter from '../components/paywall/CustomerCenter'
 
-const FREE_FEATURES = [
-  '5 AI messages per day',
-  'Basic budget tracking',
-  'Savings goal planning',
-  'Financial health score',
-]
-
-const PRO_FEATURES = [
-  'Unlimited AI coaching',
-  'Priority AI responses',
-  'Advanced analytics & insights',
-  'Custom savings strategies',
-  'Debt optimization plans',
-  'Export reports',
-  'Priority support',
-]
-
 export default function Premium() {
   const { isPro, loading } = useRevenueCat()
   const [showPaywall, setShowPaywall] = useState(false)
   const [showCustomerCenter, setShowCustomerCenter] = useState(false)
+  const { t } = useTranslation()
+
+  const FREE_FEATURES = [
+    t('premium.freeFeatures.messages'),
+    t('premium.freeFeatures.budget'),
+    t('premium.freeFeatures.savings'),
+    t('premium.freeFeatures.score'),
+  ]
+
+  const PRO_FEATURES = [
+    t('premium.proFeatures.unlimited'),
+    t('premium.proFeatures.priority'),
+    t('premium.proFeatures.analytics'),
+    t('premium.proFeatures.strategies'),
+    t('premium.proFeatures.debt'),
+    t('premium.proFeatures.export'),
+    t('premium.proFeatures.support'),
+  ]
 
   if (loading) {
     return (
@@ -39,26 +41,23 @@ export default function Premium() {
       <div className="text-center mb-8">
         <Crown className="w-12 h-12 text-accent-500 mx-auto mb-3" />
         <h1 className="text-3xl font-bold text-gray-900">
-          {isPro ? 'You\'re on MaliMind Pro!' : 'Upgrade to Pro'}
+          {isPro ? t('premium.proTitle') : t('premium.upgradeTitle')}
         </h1>
         <p className="text-gray-600 mt-2 max-w-md mx-auto">
-          {isPro
-            ? 'Enjoy unlimited AI financial coaching and premium features.'
-            : 'Unlock the full power of AI-driven financial coaching.'}
+          {isPro ? t('premium.proDesc') : t('premium.upgradeDesc')}
         </p>
       </div>
 
       {isPro ? (
-        /* Pro user view */
         <div className="space-y-6">
           <div className="bg-gradient-to-r from-primary-600 to-accent-500 rounded-2xl p-8 text-white text-center">
             <Sparkles className="w-10 h-10 mx-auto mb-3" />
-            <h2 className="text-2xl font-bold mb-2">Pro Active</h2>
-            <p className="text-primary-100">You have access to all premium features</p>
+            <h2 className="text-2xl font-bold mb-2">{t('premium.proActive')}</h2>
+            <p className="text-primary-100">{t('premium.proAccess')}</p>
           </div>
 
           <div className="bg-white rounded-xl shadow-sm p-6">
-            <h3 className="font-semibold text-gray-800 mb-4">Your Pro Features</h3>
+            <h3 className="font-semibold text-gray-800 mb-4">{t('premium.yourFeatures')}</h3>
             <div className="grid md:grid-cols-2 gap-3">
               {PRO_FEATURES.map((feature) => (
                 <div key={feature} className="flex items-center gap-2 text-sm">
@@ -73,20 +72,18 @@ export default function Premium() {
             onClick={() => setShowCustomerCenter(true)}
             className="w-full py-3 border border-gray-200 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50 transition"
           >
-            Manage Subscription
+            {t('premium.manageSubscription')}
           </button>
         </div>
       ) : (
-        /* Free user view */
         <div className="grid md:grid-cols-2 gap-6">
-          {/* Free Plan */}
           <div className="border-2 border-gray-200 rounded-2xl p-6">
             <div className="flex items-center gap-2 mb-4">
               <MessageCircle className="w-5 h-5 text-gray-400" />
-              <h3 className="font-semibold text-gray-800">Free</h3>
+              <h3 className="font-semibold text-gray-800">{t('premium.free')}</h3>
             </div>
             <p className="text-3xl font-bold text-gray-900 mb-4">
-              R0<span className="text-sm font-normal text-gray-500">/month</span>
+              R0<span className="text-sm font-normal text-gray-500">{t('premium.perMonth')}</span>
             </p>
             <ul className="space-y-2.5">
               {FREE_FEATURES.map((f) => (
@@ -100,21 +97,20 @@ export default function Premium() {
               disabled
               className="w-full mt-6 py-2.5 border border-gray-200 rounded-xl text-sm font-medium text-gray-500"
             >
-              Current Plan
+              {t('premium.currentPlan')}
             </button>
           </div>
 
-          {/* Pro Plan */}
           <div className="border-2 border-primary-500 rounded-2xl p-6 relative">
             <span className="absolute -top-3 left-4 bg-accent-500 text-white text-xs font-medium px-3 py-0.5 rounded-full">
-              Recommended
+              {t('premium.recommended')}
             </span>
             <div className="flex items-center gap-2 mb-4">
               <BarChart3 className="w-5 h-5 text-primary-600" />
-              <h3 className="font-semibold text-gray-800">Pro</h3>
+              <h3 className="font-semibold text-gray-800">{t('premium.pro')}</h3>
             </div>
             <p className="text-3xl font-bold text-gray-900 mb-4">
-              R99<span className="text-sm font-normal text-gray-500">/month</span>
+              R99<span className="text-sm font-normal text-gray-500">{t('premium.perMonth')}</span>
             </p>
             <ul className="space-y-2.5">
               {PRO_FEATURES.map((f) => (
@@ -128,13 +124,12 @@ export default function Premium() {
               onClick={() => setShowPaywall(true)}
               className="w-full mt-6 py-2.5 bg-primary-600 text-white rounded-xl text-sm font-semibold hover:bg-primary-700 transition"
             >
-              Upgrade Now
+              {t('premium.upgradeNow')}
             </button>
           </div>
         </div>
       )}
 
-      {/* Paywall Modal */}
       {showPaywall && (
         <Paywall
           onClose={() => setShowPaywall(false)}
@@ -142,7 +137,6 @@ export default function Premium() {
         />
       )}
 
-      {/* Customer Center Modal */}
       {showCustomerCenter && (
         <CustomerCenter onClose={() => setShowCustomerCenter(false)} />
       )}

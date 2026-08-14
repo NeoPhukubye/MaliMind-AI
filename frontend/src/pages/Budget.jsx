@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Plus, Trash2, Receipt } from 'lucide-react'
 import { api } from '../services/api'
 
@@ -7,6 +8,7 @@ export default function Budget() {
   const [newCategory, setNewCategory] = useState({ name: '', amount: '' })
   const [income, setIncome] = useState('')
   const [expenseForm, setExpenseForm] = useState({ categoryIdx: null, amount: '' })
+  const { t } = useTranslation()
 
   useEffect(() => {
     api.get('/api/budget').then((res) => {
@@ -52,13 +54,12 @@ export default function Budget() {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-bold">Budget Planner</h1>
+      <h1 className="text-2xl font-bold">{t('budget.title')}</h1>
 
-      {/* Quick Expense Logger */}
       {categories.length > 0 && (
         <div className="bg-gradient-to-r from-primary-50 to-accent-50 rounded-xl p-5 shadow-sm border border-primary-100">
           <h3 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
-            <Receipt className="w-4 h-4 text-primary-600" /> Log an Expense
+            <Receipt className="w-4 h-4 text-primary-600" /> {t('budget.logExpense')}
           </h3>
           <form onSubmit={logExpense} className="flex flex-wrap gap-3">
             <select
@@ -67,14 +68,14 @@ export default function Budget() {
               className="border rounded-lg px-4 py-2 focus:ring-2 focus:ring-primary-500 outline-none bg-white"
               required
             >
-              <option value="" disabled>Select category</option>
+              <option value="" disabled>{t('budget.selectCategory')}</option>
               {categories.map((c, i) => (
                 <option key={i} value={i}>{c.name}</option>
               ))}
             </select>
             <input
               type="number"
-              placeholder="Amount (R)"
+              placeholder={t('budget.amountR')}
               value={expenseForm.amount}
               onChange={(e) => setExpenseForm({ ...expenseForm, amount: e.target.value })}
               className="border rounded-lg px-4 py-2 w-36 focus:ring-2 focus:ring-primary-500 outline-none"
@@ -82,27 +83,26 @@ export default function Budget() {
               min="1"
             />
             <button type="submit" className="bg-primary-600 text-white px-5 py-2 rounded-lg hover:bg-primary-700 transition font-medium">
-              Log Expense
+              {t('budget.logExpenseBtn')}
             </button>
           </form>
         </div>
       )}
 
-      {/* Summary Cards */}
       {categories.length > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-white rounded-xl p-4 shadow-sm text-center">
-            <p className="text-sm text-gray-500">Total Budget</p>
+            <p className="text-sm text-gray-500">{t('budget.totalBudget')}</p>
             <p className="text-2xl font-bold text-gray-800">R{totalBudget.toLocaleString()}</p>
           </div>
           <div className="bg-white rounded-xl p-4 shadow-sm text-center">
-            <p className="text-sm text-gray-500">Total Spent</p>
+            <p className="text-sm text-gray-500">{t('budget.totalSpent')}</p>
             <p className={`text-2xl font-bold ${totalSpent > totalBudget ? 'text-red-600' : 'text-gray-800'}`}>
               R{totalSpent.toLocaleString()}
             </p>
           </div>
           <div className="bg-white rounded-xl p-4 shadow-sm text-center">
-            <p className="text-sm text-gray-500">Remaining</p>
+            <p className="text-sm text-gray-500">{t('budget.remaining')}</p>
             <p className={`text-2xl font-bold ${remaining < 0 ? 'text-red-600' : 'text-primary-600'}`}>
               R{remaining.toLocaleString()}
             </p>
@@ -112,12 +112,12 @@ export default function Budget() {
 
       <div className="bg-white rounded-xl p-6 shadow-sm">
         <div className="mb-6">
-          <label className="block text-sm font-medium text-gray-700 mb-1">Monthly Income</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">{t('budget.monthlyIncome')}</label>
           <input
             type="number"
             value={income}
             onChange={(e) => setIncome(e.target.value)}
-            placeholder="Enter your monthly income"
+            placeholder={t('budget.enterIncome')}
             className="w-full md:w-64 border rounded-lg px-4 py-2 focus:ring-2 focus:ring-primary-500 outline-none"
           />
         </div>
@@ -125,20 +125,20 @@ export default function Budget() {
         <form onSubmit={addCategory} className="flex flex-wrap gap-3 mb-6">
           <input
             type="text"
-            placeholder="Category name"
+            placeholder={t('budget.categoryName')}
             value={newCategory.name}
             onChange={(e) => setNewCategory({ ...newCategory, name: e.target.value })}
             className="border rounded-lg px-4 py-2 focus:ring-2 focus:ring-primary-500 outline-none"
           />
           <input
             type="number"
-            placeholder="Budget amount"
+            placeholder={t('budget.budgetAmount')}
             value={newCategory.amount}
             onChange={(e) => setNewCategory({ ...newCategory, amount: e.target.value })}
             className="border rounded-lg px-4 py-2 w-32 focus:ring-2 focus:ring-primary-500 outline-none"
           />
           <button type="submit" className="bg-primary-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-primary-700 transition">
-            <Plus className="w-4 h-4" /> Add Category
+            <Plus className="w-4 h-4" /> {t('budget.addCategory')}
           </button>
         </form>
 
@@ -153,7 +153,7 @@ export default function Budget() {
                     <span className="font-medium">{cat.name}</span>
                     <span className={isOver ? 'text-red-600 font-semibold' : 'text-gray-500'}>
                       R{cat.spent.toLocaleString()} / R{cat.amount.toLocaleString()}
-                      {isOver && ' (over!)'}
+                      {isOver && ` ${t('budget.over')}`}
                     </span>
                   </div>
                   <div className="h-2.5 bg-gray-100 rounded-full">

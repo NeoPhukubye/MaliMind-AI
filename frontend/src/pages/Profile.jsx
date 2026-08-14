@@ -1,12 +1,14 @@
+import { useTranslation } from 'react-i18next'
 import { useAuth } from '../context/AuthContext'
 import { User, LogOut, Mail, Calendar } from 'lucide-react'
 
 export default function Profile() {
   const { user, logout } = useAuth()
+  const { t } = useTranslation()
 
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-bold">Profile</h1>
+      <h1 className="text-2xl font-bold">{t('profile.title')}</h1>
 
       <div className="bg-white rounded-xl p-6 shadow-sm">
         <div className="flex items-center gap-4 mb-6">
@@ -22,11 +24,11 @@ export default function Profile() {
         <div className="space-y-4 border-t pt-4">
           <div className="flex items-center gap-3 text-sm">
             <Mail className="w-4 h-4 text-gray-400" />
-            <span className="text-gray-600">{user?.email || 'No email'}</span>
+            <span className="text-gray-600">{user?.email || t('profile.noEmail')}</span>
           </div>
           <div className="flex items-center gap-3 text-sm">
             <Calendar className="w-4 h-4 text-gray-400" />
-            <span className="text-gray-600">Member since {user?.createdAt || 'N/A'}</span>
+            <span className="text-gray-600">{t('profile.memberSince', { date: user?.createdAt || 'N/A' })}</span>
           </div>
         </div>
       </div>
@@ -35,7 +37,7 @@ export default function Profile() {
         onClick={logout}
         className="flex items-center gap-2 text-red-600 hover:text-red-700 font-medium"
       >
-        <LogOut className="w-4 h-4" /> Sign Out
+        <LogOut className="w-4 h-4" /> {t('common.signOut')}
       </button>
     </div>
   )

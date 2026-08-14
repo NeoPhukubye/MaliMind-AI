@@ -1,25 +1,27 @@
 import { useState, useRef, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Send, Bot, User, Sparkles } from 'lucide-react'
 import { api } from '../services/api'
 import { useSubscription } from '../hooks/useSubscription'
 
-const SUGGESTED_PROMPTS = [
-  "How can I save more on my current income?",
-  "What's the 50/30/20 rule for my budget?",
-  "Should I join a stokvel or open a TFSA?",
-  "Help me create a debt repayment plan",
-  "How much should my emergency fund be?",
-  "Tips for reducing my grocery spending",
-]
-
 export default function Coach() {
+  const { t } = useTranslation()
   const [messages, setMessages] = useState([
-    { role: 'assistant', content: "Hi! I'm your MaliMind AI financial coach. I can see your budget, savings goals, and financial health score — so my advice is personalized to your situation. What would you like help with today?" },
+    { role: 'assistant', content: t('coach.greeting') },
   ])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
   const { isPro, messageCount, maxFreeMessages } = useSubscription()
   const messagesEnd = useRef(null)
+
+  const suggestedPrompts = [
+    t('coach.suggestions.save'),
+    t('coach.suggestions.rule'),
+    t('coach.suggestions.stokvel'),
+    t('coach.suggestions.debt'),
+    t('coach.suggestions.emergency'),
+    t('coach.suggestions.grocery'),
+  ]
 
   useEffect(() => {
     messagesEnd.current?.scrollIntoView({ behavior: 'smooth' })
@@ -41,8 +43,8 @@ export default function Coach() {
       setMessages((prev) => [...prev, { role: 'assistant', content: res.data.response }])
     } catch (err) {
       const detail = err.response?.status === 429
-        ? "You've reached your daily free message limit. Upgrade to Pro for unlimited coaching!"
-        : "Sorry, I couldn't process that. Please try again."
+        ? t('coach.limitReached')
+        : t('coach.error')
       setMessages((prev) => [...prev, { role: 'assistant', content: detail }])
     } finally {
       setLoading(false)
@@ -53,12 +55,12 @@ export default function Coach() {
 
   return (
     <div className="flex flex-col h-[calc(100vh-8rem)]">
-      <h1 className="text-2xl font-bold mb-4">AI Financial Coach</h1>
+      <h1 className="text-2xl font-bold mb-4">{t('coach.title')}</h1>
 
       {!isPro && (
         <div className="bg-accent-50 border border-accent-200 rounded-lg px-4 py-2 mb-4 text-sm text-accent-800">
-          Free tier: {messageCount}/{maxFreeMessages} messages used.
-          <a href="/app/premium" className="ml-2 font-medium underline">Upgrade to Pro</a>
+          {t('coach.freeTier', { used: messageCount, max: maxFreeMessages })}
+          <a href="/app/premium" className="ml-2 font-medium underline">{t('coach.upgradeToPro')}</a>
         </div>
       )}
 
@@ -81,14 +83,13 @@ export default function Coach() {
           </div>
         ))}
 
-        {/* Suggested prompts */}
         {showSuggestions && (
           <div className="pt-2">
             <p className="text-xs text-gray-400 mb-2 flex items-center gap-1">
-              <Sparkles className="w-3 h-3" /> Try asking:
+              <Sparkles className="w-3 h-3" /> {t('coach.tryAsking')}
             </p>
             <div className="flex flex-wrap gap-2">
-              {SUGGESTED_PROMPTS.map((prompt) => (
+              {suggestedPrompts.map((prompt) => (
                 <button
                   key={prompt}
                   onClick={() => sendMessage(null, prompt)}
@@ -123,7 +124,7 @@ export default function Coach() {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Ask your financial coach..."
+          placeholder={t('coach.placeholder')}
           className="flex-1 border rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary-500 outline-none"
           disabled={!isPro && messageCount >= maxFreeMessages}
         />
