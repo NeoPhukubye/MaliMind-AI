@@ -1,20 +1,9 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { useAuth } from '../context/AuthContext'
 import { TrendingUp, Shield, Brain, Target, Users, Star, ArrowRight, CheckCircle } from 'lucide-react'
 import { useState, useEffect } from 'react'
-
-const features = [
-  { icon: Brain, title: 'AI Financial Coach', desc: 'Personalized advice powered by AI that knows your budget, savings goals, and spending habits' },
-  { icon: Target, title: 'Smart Budgeting', desc: 'Track spending by category with real-time progress bars and overspending alerts' },
-  { icon: TrendingUp, title: 'Savings Goals', desc: 'Set targets with deadlines and get intelligent recommendations to reach them faster' },
-  { icon: Shield, title: 'Financial Health Score', desc: 'Dynamic score that reflects your income, spending, savings rate, and debt health' },
-]
-
-const stats = [
-  { value: '60%', label: 'of South Africans live paycheck to paycheck' },
-  { value: 'R99', label: '/month for unlimited AI coaching' },
-  { value: '5', label: 'free AI messages daily' },
-]
+import LanguageSelector from '../components/common/LanguageSelector'
 
 function AnimatedCounter({ target, suffix = '' }) {
   const [count, setCount] = useState(0)
@@ -35,6 +24,20 @@ function AnimatedCounter({ target, suffix = '' }) {
 
 export default function Landing() {
   const { isAuthenticated, login } = useAuth()
+  const { t } = useTranslation()
+
+  const features = [
+    { icon: Brain, title: t('landing.features.aiCoach'), desc: t('landing.features.aiCoachDesc') },
+    { icon: Target, title: t('landing.features.smartBudget'), desc: t('landing.features.smartBudgetDesc') },
+    { icon: TrendingUp, title: t('landing.features.savingsGoals'), desc: t('landing.features.savingsGoalsDesc') },
+    { icon: Shield, title: t('landing.features.healthScore'), desc: t('landing.features.healthScoreDesc') },
+  ]
+
+  const stats = [
+    { value: '60%', label: t('landing.stats.paycheckStat') },
+    { value: 'R99', label: t('landing.stats.priceStat') },
+    { value: '5', label: t('landing.stats.freeStat') },
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700">
@@ -46,14 +49,15 @@ export default function Landing() {
           </div>
           MaliMind AI
         </h1>
-        <div className="flex gap-4">
+        <div className="flex items-center gap-4">
+          <LanguageSelector />
           {isAuthenticated ? (
             <Link to="/app" className="bg-accent-500 text-white px-5 py-2 rounded-lg font-medium hover:bg-accent-600 transition flex items-center gap-2">
-              Go to Dashboard <ArrowRight className="w-4 h-4" />
+              {t('common.goToDashboard')} <ArrowRight className="w-4 h-4" />
             </Link>
           ) : (
             <button onClick={login} className="bg-accent-500 text-white px-5 py-2 rounded-lg font-medium hover:bg-accent-600 transition">
-              Get Started
+              {t('common.getStarted')}
             </button>
           )}
         </div>
@@ -64,27 +68,26 @@ export default function Landing() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-primary-100 text-sm px-4 py-2 rounded-full mb-6">
             <Star className="w-4 h-4 text-accent-400" />
-            Built for Africa, by Africans
+            {t('landing.tagline')}
           </div>
           <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Your AI Financial Coach<br />
+            {t('landing.heroTitle')}<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-300">
-              for Africa
+              {t('landing.heroHighlight')}
             </span>
           </h2>
           <p className="text-xl text-primary-100 max-w-2xl mx-auto mb-8">
-            Build healthier financial habits with intelligent budgeting, savings planning,
-            and personalized guidance — all tailored to the South African financial landscape.
+            {t('landing.heroDesc')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={login}
               className="bg-accent-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-600 transition shadow-lg shadow-accent-500/30 flex items-center justify-center gap-2"
             >
-              Start Free Today <ArrowRight className="w-5 h-5" />
+              {t('common.startFree')} <ArrowRight className="w-5 h-5" />
             </button>
             <div className="flex items-center justify-center gap-2 text-primary-200 text-sm">
-              <CheckCircle className="w-4 h-4" /> No credit card required
+              <CheckCircle className="w-4 h-4" /> {t('common.noCreditCard')}
             </div>
           </div>
         </div>
@@ -114,12 +117,12 @@ export default function Landing() {
 
         {/* How it works */}
         <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold text-white mb-12">How It Works</h3>
+          <h3 className="text-3xl font-bold text-white mb-12">{t('landing.howItWorks')}</h3>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
-              { step: '1', title: 'Set Your Budget', desc: 'Enter your income and create spending categories' },
-              { step: '2', title: 'Track & Save', desc: 'Log expenses and set savings goals with deadlines' },
-              { step: '3', title: 'Get AI Coaching', desc: 'Ask your AI coach for personalized financial advice' },
+              { step: '1', title: t('landing.steps.step1Title'), desc: t('landing.steps.step1Desc') },
+              { step: '2', title: t('landing.steps.step2Title'), desc: t('landing.steps.step2Desc') },
+              { step: '3', title: t('landing.steps.step3Title'), desc: t('landing.steps.step3Desc') },
             ].map((item) => (
               <div key={item.step} className="relative">
                 <div className="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">
@@ -138,22 +141,22 @@ export default function Landing() {
             {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 text-accent-400 fill-accent-400" />)}
           </div>
           <p className="text-white text-lg italic mb-4">
-            "MaliMind helped me save R15,000 for my emergency fund in just 4 months. The AI coach keeps me accountable in a way no app ever has."
+            "{t('landing.testimonial')}"
           </p>
           <div className="flex items-center justify-center gap-3">
             <div className="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center">
               <Users className="w-5 h-5 text-primary-200" />
             </div>
             <div className="text-left">
-              <p className="text-white font-medium text-sm">Thandi M.</p>
-              <p className="text-primary-300 text-xs">Cape Town, South Africa</p>
+              <p className="text-white font-medium text-sm">{t('landing.testimonialName')}</p>
+              <p className="text-primary-300 text-xs">{t('landing.testimonialLocation')}</p>
             </div>
           </div>
         </div>
       </main>
 
       <footer className="text-center py-6 text-primary-300 text-sm border-t border-white/10">
-        &copy; 2024 MaliMind AI. Built by Neo Phukubye.
+        {t('landing.footer')}
       </footer>
     </div>
   )
