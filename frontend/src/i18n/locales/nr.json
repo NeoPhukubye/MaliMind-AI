@@ -1,0 +1,153 @@
+{
+  "common": {
+    "appName": "MaliMind AI",
+    "loading": "Kuyalayitjhwa...",
+    "loadingFinances": "Kulayitjhwa iimali zakho...",
+    "cancel": "Jikisa",
+    "delete": "Susa",
+    "save": "Londoloza",
+    "signOut": "Phuma",
+    "getStarted": "Thoma",
+    "goToDashboard": "Iya ku-Dashboard",
+    "noCreditCard": "Akutlhogeki ikhadi lesikwelede",
+    "startFree": "Thoma Simahla Namhlanjesi"
+  },
+  "nav": {
+    "dashboard": "Ideshbhodi",
+    "budget": "Ibhajethi",
+    "savings": "Ukulondoloza",
+    "aiCoach": "Umqeqetshi we-AI",
+    "premium": "IPhrimiyamu",
+    "profile": "Iphrofayela"
+  },
+  "landing": {
+    "tagline": "Yakhiwe i-Afrika, ngama-Afrika",
+    "heroTitle": "Umqeqetshi Wakho Weemali we-AI",
+    "heroHighlight": "we-Afrika",
+    "heroDesc": "Yakha imikhuba yeemali ehle ngokuhlela ibhajethi ngokuhlakanipha, ukuhlela ukulondoloza, kanye nokuqondiswa ngqo — koke kuhlelelwe isimo seemali seSewula Afrika.",
+    "features": {
+      "aiCoach": "Umqeqetshi Weemali we-AI",
+      "aiCoachDesc": "Iseluleko esiqondiswe ngqo esisetjenziswa yi-AI eyazi ibhajethi yakho, iminqopho yokulondoloza, nemikhuba yokusebenzisa imali",
+      "smartBudget": "Ukuhlela Ibhajethi Ngokuhlakanipha",
+      "smartBudgetDesc": "Landelela ukusebenzisa imali ngokwesigaba ngamabha aqhubekako nezaziso zokusebenzisa ngokudlulisako",
+      "savingsGoals": "Iminqopho Yokulondoloza",
+      "savingsGoalsDesc": "Beka iminqopho enomqamulajuqu uthole iincomo ezihlakanipaako ukufika khona msinyana",
+      "healthScore": "Isikali Sepilo Yeemali",
+      "healthScoreDesc": "Isikali esiguqukako esibonisa imali engenako, ukusebenzisa, isilinganiso sokulondoloza, nepilo yesikwelede"
+    },
+    "stats": {
+      "paycheckStat": "yabeSewula Afrika baphila umrholo nomurholo",
+      "priceStat": "/ngenyanga ngokuqeqeshwa kwe-AI okunganamkhawulo",
+      "freeStat": "imilayezo ye-AI yamahhala malanga woke"
+    },
+    "howItWorks": "Isebenza Njani",
+    "steps": {
+      "step1Title": "Hlela Ibhajethi Yakho",
+      "step1Desc": "Faka imali engenako yakho wenze iinkamba zokusebenzisa imali",
+      "step2Title": "Landelela & Londoloza",
+      "step2Desc": "Tlola iindleko ubeke iminqopho yokulondoloza enomqamulajuqu",
+      "step3Title": "Fumana Ukuqeqeshwa kwe-AI",
+      "step3Desc": "Buza umqeqetshi wakho we-AI iseluleko seemali esiqondiswe ngqo"
+    },
+    "testimonial": "I-MaliMind ingisizile ukulondoloza u-R15,000 wesikwama sami sezinto eziqubukako ngenyanga ezine kwaphela. Umqeqetshi we-AI ungibamba nginomthwalo ngendlela engazange yenzeke nge-app.",
+    "testimonialName": "Thandi M.",
+    "testimonialLocation": "eKapa, eSewula Afrika",
+    "footer": "© 2024 MaliMind AI. Yakhiwe ngu-Neo Phukubye."
+  },
+  "dashboard": {
+    "title": "Ideshbhodi",
+    "monthlyBudget": "Ibhajethi Yenyanga",
+    "totalSpent": "Isilinganiso Esisetjenzisiweko",
+    "totalSavings": "Isilinganiso Esilondolozekileko",
+    "financialScore": "Isikali Seemali",
+    "smartInsights": "Ukuzwisisa Ngokuhlakanipha"
+  },
+  "budget": {
+    "title": "Umhleli Webhajethi",
+    "logExpense": "Tlola Indleko",
+    "selectCategory": "Khetha isigaba",
+    "amountR": "Isilinganiso (R)",
+    "logExpenseBtn": "Tlola Indleko",
+    "totalBudget": "Ibhajethi Yoke",
+    "totalSpent": "Isilinganiso Esisetjenzisiweko",
+    "remaining": "Okusalako",
+    "monthlyIncome": "Imali Engenako Ngenyanga",
+    "enterIncome": "Faka imali engenako ngenyanga",
+    "categoryName": "Ibizo lesigaba",
+    "budgetAmount": "Isilinganiso sebhajethi",
+    "addCategory": "Engeza Isigaba",
+    "over": "(ngaphezu!)"
+  },
+  "savings": {
+    "title": "Iminqopho Yokulondoloza",
+    "newGoal": "Umnqopho Omutjha",
+    "totalProgress": "Ikambiso Yokulondoloza Yoke",
+    "goalPlaceholder": "Ibizo lomnqopho (isib., Isikwama Sezinto Eziqubukako)",
+    "targetAmount": "Isilinganiso esiqondiweko (R)",
+    "createGoal": "Yenza Umnqopho",
+    "done": "Kwenziwe!",
+    "complete": "kuphelele",
+    "amount": "Isilinganiso",
+    "add": "+ Engeza",
+    "noGoals": "Awukabi neminqopho yokulondoloza. Yenza owakho wokuthoma!",
+    "createFirst": "Yenza Umnqopho Wakho Wokuthoma",
+    "by": "Ngo"
+  },
+  "coach": {
+    "title": "Umqeqetshi Weemali we-AI",
+    "greeting": "Lotjhani! Ngingumqeqetshi wakho weemali we-MaliMind AI. Ngiyakghona ukubona ibhajethi yakho, iminqopho yokulondoloza, nesikali sepilo yeemali — ngalokho iseluleko sami siqondiswe esimeni sakho. Ufuna ukusizwa ngani namhlanjesi?",
+    "freeTier": "Isigaba samahhala: {{used}}/{{max}} imilayezo esetjenzisiweko.",
+    "upgradeToPro": "Kuphuphurela ku-Pro",
+    "placeholder": "Buza umqeqetshi wakho weemali...",
+    "tryAsking": "Linga ukubuza:",
+    "limitReached": "Ufikile emkhawulweni wemilayezo yamahhala yamalanga. Kuphuphurela ku-Pro ukufumana ukuqeqeshwa okunganamkhawulo!",
+    "error": "Uxolo, angikghonanga ukukuphendula lokho. Linga godu.",
+    "suggestions": {
+      "save": "Ngingalondoloza njani ngokungeziweko ngemali engenako yami?",
+      "rule": "Umthetho we-50/30/20 uthini ngebhajethi yami?",
+      "stokvel": "Kufanele ngijoyine istokfela namkha ngivule i-TFSA?",
+      "debt": "Ngisize ngenze ihlelo lokubhadela iinkolodo",
+      "emergency": "Isikwama sami sezinto eziqubukako kufanele sibe yimalini?",
+      "grocery": "Amathiphu wokunciphisa ukusebenzisa imali yokudla"
+    }
+  },
+  "profile": {
+    "title": "Iphrofayela",
+    "noEmail": "Ayikho i-imeyili",
+    "memberSince": "Ilungu kusukela ngo-{{date}}"
+  },
+  "premium": {
+    "proTitle": "Useku-MaliMind Pro!",
+    "upgradeTitle": "Kuphuphurela ku-Pro",
+    "proDesc": "Thabela ukuqeqeshwa kweemali kwe-AI okunganamkhawulo nezici eziphrimiyamu.",
+    "upgradeDesc": "Vula amandla apheleko wokuqeqeshwa kweemali okusetjenziswa yi-AI.",
+    "proActive": "I-Pro Iyasebenza",
+    "proAccess": "Ufikelela kizo zoke izici eziphrimiyamu",
+    "yourFeatures": "Izici Zakho ze-Pro",
+    "manageSubscription": "Phatha Ukutlolisa",
+    "free": "Simahla",
+    "pro": "Pro",
+    "currentPlan": "Ihlelo Lamanje",
+    "recommended": "Okunconyiweko",
+    "upgradeNow": "Kuphuphurela Nje",
+    "perMonth": "/ngenyanga",
+    "freeFeatures": {
+      "messages": "Imilayezo ye-AI emi-5 ngelanga",
+      "budget": "Ukulandelela ibhajethi okuyisisekelo",
+      "savings": "Ukuhlela iminqopho yokulondoloza",
+      "score": "Isikali sepilo yeemali"
+    },
+    "proFeatures": {
+      "unlimited": "Ukuqeqeshwa kwe-AI okunganamkhawulo",
+      "priority": "Iimpendulo ze-AI ezibalulekileko",
+      "analytics": "Ukuhlaziya okuthuthukiweko nokuzwisisa",
+      "strategies": "Amasu wokulondoloza aquketheko",
+      "debt": "Amahlelo wokuthuthukisa iinkolodo",
+      "export": "Khupha imibiko",
+      "support": "Ukwesekwa okubalulekileko"
+    }
+  },
+  "languageSelector": {
+    "label": "Ilimi"
+  }
+}

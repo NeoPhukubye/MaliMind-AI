@@ -1,0 +1,153 @@
+{
+  "common": {
+    "appName": "MaliMind AI",
+    "loading": "Hu khou lodwa...",
+    "loadingFinances": "Hu khou lodwa masheleni aṋu...",
+    "cancel": "Khantselani",
+    "delete": "Thuthelani",
+    "save": "Sevhani",
+    "signOut": "Bvani",
+    "getStarted": "Thomani",
+    "goToDashboard": "Iyani kha Dashboard",
+    "noCreditCard": "A hu ṱoḓei khaḓi ya vhukolodo",
+    "startFree": "Thomani Nga Mahala Ṋamusi"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "budget": "Bajete",
+    "savings": "U Sevha",
+    "aiCoach": "Muṅwaleli wa AI",
+    "premium": "Premium",
+    "profile": "Profaili"
+  },
+  "landing": {
+    "tagline": "Yo fhatiwa Afrika, nga vha-Afrika",
+    "heroTitle": "Muṅwaleli Waṋu wa Masheleni wa AI",
+    "heroHighlight": "wa Afrika",
+    "heroDesc": "Fhatani mikhwa yavhuḓi ya masheleni nga u pulana bajete nga vhuṱali, u pulana u sevha, na vhulivhisi vhu re khagala — zwoṱhe zwo lugiselwa vhuimo ha masheleni ha Afrika Tshipembe.",
+    "features": {
+      "aiCoach": "Muṅwaleli wa Masheleni wa AI",
+      "aiCoachDesc": "Nyeletshedzo yo livhiswaho nga AI ine ya ḓivha bajete yaṋu, zwiṱoḓo zwa u sevha, na mikhwa ya u shumisa masheleni",
+      "smartBudget": "U Pulana Bajete Nga Vhuṱali",
+      "smartBudgetDesc": "Ṱoḓani u shumisa masheleni nga khethekanyo na u ṱangana na zwitsivhiso zwa u shumisa masheleni a nnzhi",
+      "savingsGoals": "Zwiṱoḓo zwa U Sevha",
+      "savingsGoalsDesc": "Vhekani zwiṱoḓo na maḓuvha a u fhedzisela ni wane nyeletshedzo ya vhuṱali u swika hone nga u ṱavhanya",
+      "healthScore": "Tshikalo tsha Mutakalo wa Masheleni",
+      "healthScoreDesc": "Tshikalo tshi no shandukaho tshi sumbedzaho mbuelo, u shumisa, reithi ya u sevha, na mutakalo wa milandu"
+    },
+    "stats": {
+      "paycheckStat": "ya vha-Afrika Tshipembe vha tshila nga mugolo u ṱuwa kha mugolo",
+      "priceStat": "/nga ṅwedzi u guda na AI hu si na mukano",
+      "freeStat": "mulaedza wa AI wa mahala nga ḓuvha"
+    },
+    "howItWorks": "I Shuma Hani",
+    "steps": {
+      "step1Title": "Vhekani Bajete Yaṋu",
+      "step1Desc": "Dzhenisani mbuelo yaṋu ni ite khethekanyo dza u shumisa masheleni",
+      "step2Title": "Ṱoḓani & Sevhani",
+      "step2Desc": "Ṅwalani masheleni o shumisiwaho ni vheke zwiṱoḓo zwa u sevha na maḓuvha a u fhedzisela",
+      "step3Title": "Wanani Vhulivhisi ha AI",
+      "step3Desc": "Vhudzisani muṅwaleli waṋu wa AI nyeletshedzo ya masheleni yo livhiswaho"
+    },
+    "testimonial": "MaliMind yo nthusa u sevha R15,000 ya tshikhwama tshanga tsho ḓigwadamaho nga miṅwedzi miṋa fhedzi. Muṅwaleli wa AI u ndzula ndi na vhudifhinduleli nga nḓila ine a hu na app yo vhuya ya ita.",
+    "testimonialName": "Thandi M.",
+    "testimonialLocation": "Cape Town, Afrika Tshipembe",
+    "footer": "© 2024 MaliMind AI. Yo fhatiwa nga Neo Phukubye."
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "monthlyBudget": "Bajete ya Ṅwedzi",
+    "totalSpent": "Tshelede Yoṱhe yo Shumisiwaho",
+    "totalSavings": "Tshelede Yoṱhe yo Sevhiwaho",
+    "financialScore": "Tshikalo tsha Masheleni",
+    "smartInsights": "Vhuṱali ha Vhupfiwa"
+  },
+  "budget": {
+    "title": "Mupulani wa Bajete",
+    "logExpense": "Ṅwalani Tshelede yo Shumisiwaho",
+    "selectCategory": "Khethani khethekanyo",
+    "amountR": "Tshelede (R)",
+    "logExpenseBtn": "Ṅwalani Tshelede",
+    "totalBudget": "Bajete Yoṱhe",
+    "totalSpent": "Tshelede Yoṱhe yo Shumisiwaho",
+    "remaining": "Yo Salaho",
+    "monthlyIncome": "Mbuelo ya Ṅwedzi",
+    "enterIncome": "Dzhenisani mbuelo yaṋu ya ṅwedzi",
+    "categoryName": "Dzina ḽa khethekanyo",
+    "budgetAmount": "Tshelede ya bajete",
+    "addCategory": "Ḓadzani Khethekanyo",
+    "over": "(nṱha!)"
+  },
+  "savings": {
+    "title": "Zwiṱoḓo zwa U Sevha",
+    "newGoal": "Tshipiḓo Tshiswa",
+    "totalProgress": "Mvelelo Yoṱhe ya U Sevha",
+    "goalPlaceholder": "Dzina ḽa tshipiḓo (tsumbo., Tshikhwama tsho Ḓigwadamaho)",
+    "targetAmount": "Tshelede yo livhiswaho (R)",
+    "createGoal": "Ṋeani Tshipiḓo",
+    "done": "Zwo Fhela!",
+    "complete": "zwo fhela",
+    "amount": "Tshelede",
+    "add": "+ Ḓadzani",
+    "noGoals": "A hu na zwiṱoḓo zwa u sevha. Ṋeani tsha u thoma!",
+    "createFirst": "Ṋeani Tshipiḓo Tshaṋu Tsha U Thoma",
+    "by": "Nga"
+  },
+  "coach": {
+    "title": "Muṅwaleli wa Masheleni wa AI",
+    "greeting": "Aa! Ndi muṅwaleli waṋu wa masheleni wa MaliMind AI. Ndi a kona u vhona bajete yaṋu, zwiṱoḓo zwa u sevha, na tshikalo tsha mutakalo wa masheleni — ngauralo nyeletshedzo yanga yo livhiselwa vhuimo haṋu. Ni ṱoḓa thuso ngani ṋamusi?",
+    "freeTier": "Tshiimo tsha mahala: {{used}}/{{max}} milaedza yo shumisiwaho.",
+    "upgradeToPro": "Engedzani u ya kha Pro",
+    "placeholder": "Vhudzisani muṅwaleli waṋu wa masheleni...",
+    "tryAsking": "Lingedza u vhudzisa:",
+    "limitReached": "No swika kha mukano wa milaedza ya mahala ya ḓuvha. Engedzani u ya kha Pro u wana vhulivhisi hu si na mukano!",
+    "error": "Ndi khou humbela pfarelo, a tho ngo kona u shumisa zwenezwo. Lingedza hafhu.",
+    "suggestions": {
+      "save": "Ndi nga sevha hani nga mbuelo yanga ya zwino?",
+      "rule": "Mulayo wa 50/30/20 ndi mini kha bajete yanga?",
+      "stokvel": "Ndi tea u dzhenelela stokvel kana u vula TFSA?",
+      "debt": "Nthuseni u ita pulano ya u bvisa milandu",
+      "emergency": "Tshikhwama tshanga tsho ḓigwadamaho tshi tea u vha tshelede ngafhani?",
+      "grocery": "Nyeletshedzo ya u fhungudza u renga zwiḽiwa"
+    }
+  },
+  "profile": {
+    "title": "Profaili",
+    "noEmail": "A hu na email",
+    "memberSince": "Muraḓo u bva {{date}}"
+  },
+  "premium": {
+    "proTitle": "Ni kha MaliMind Pro!",
+    "upgradeTitle": "Engedzani u ya kha Pro",
+    "proDesc": "Takadzani vhulivhisi ha masheleni ha AI hu si na mukano na zwiga zwa premium.",
+    "upgradeDesc": "Vulani maanḓa oṱhe a vhulivhisi ha masheleni vhu shunaho nga AI.",
+    "proActive": "Pro I Khou Shuma",
+    "proAccess": "Ni na ndaulo kha zwiga zwoṱhe zwa premium",
+    "yourFeatures": "Zwiga Zwaṋu zwa Pro",
+    "manageSubscription": "Langulani Tshumisano",
+    "free": "Mahala",
+    "pro": "Pro",
+    "currentPlan": "Pulano ya Zwino",
+    "recommended": "Yo Thembiswaho",
+    "upgradeNow": "Engedzani Zwino",
+    "perMonth": "/nga ṅwedzi",
+    "freeFeatures": {
+      "messages": "Milaedza ya AI ya 5 nga ḓuvha",
+      "budget": "U ṱoḓa bajete ha mutheo",
+      "savings": "U pulana zwiṱoḓo zwa u sevha",
+      "score": "Tshikalo tsha mutakalo wa masheleni"
+    },
+    "proFeatures": {
+      "unlimited": "Vhulivhisi ha AI hu si na mukano",
+      "priority": "Phindulo dza AI dza u thoma",
+      "analytics": "Musaukano na vhupfiwa ha nṱha",
+      "strategies": "Maitele a u sevha o itiwaho",
+      "debt": "Dzipulano dza u khwinisa milandu",
+      "export": "Bvisani ripoto",
+      "support": "Thikhedzo ya u thoma"
+    }
+  },
+  "languageSelector": {
+    "label": "Luambo"
+  }
+}
