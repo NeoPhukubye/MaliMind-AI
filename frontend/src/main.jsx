@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import { NoAuthProvider } from './context/AuthContext'
 import App from './App'
+import './i18n'
 import './styles/index.css'
 
 const clerkKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
