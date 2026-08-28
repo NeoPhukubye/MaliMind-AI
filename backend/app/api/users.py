@@ -4,7 +4,7 @@ from sqlalchemy import select
 from app.schemas.schemas import AuthRequest, UserResponse
 from app.database.db import get_db
 from app.core.auth import get_current_user_id
-from app.models.models import User, BudgetData, SavingsData
+from app.models.models import User, BudgetData, SavingsData, Transaction
 from app.services.analytics import calculate_financial_score, generate_insights
 
 router = APIRouter()
@@ -82,11 +82,17 @@ async def dashboard(
         for c in categories if c.get("spent", 0) > 0
     ]
 
+    flagged_result = await db.execute(
+        select(Transaction).where(Transaction.user_id == user_id, Transaction.flagged == True)
+    )
+    flagged_count = len(flagged_result.scalars().all())
+
     insights = generate_insights(
         income=income,
         categories=categories,
         goals=goals,
         financial_score=financial_score,
+        flagged_count=flagged_count,
     )
 
     return {
@@ -99,4 +105,5 @@ async def dashboard(
             {"name": "No data yet", "amount": 0}
         ],
         "insights": insights,
+        "flaggedCount": flagged_count,
     }

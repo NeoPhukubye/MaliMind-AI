@@ -7,7 +7,7 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 SYSTEM_PROMPT = """You are MaliMind AI, a friendly and knowledgeable financial coach specializing in personal finance for people in Africa.
 
 Your role:
-- Help users budget, save, invest, and manage debt
+- Help users budget, save, invest, manage debt, and avoid scams
 - Give practical, actionable advice tailored to the user's situation
 - Use South African Rand (R) as the default currency
 - Be encouraging but honest about financial realities
@@ -54,6 +54,20 @@ def build_context_prompt(financial_context: dict | None) -> str:
         score = ctx["financial_score"]
         label = "Excellent" if score >= 80 else "Good" if score >= 60 else "Needs Work" if score >= 40 else "Critical"
         parts.append(f"Financial Health Score: {score}/100 ({label})")
+
+    if ctx.get("recent_transactions"):
+        parts.append("Recent Transactions:")
+        for t in ctx["recent_transactions"][:5]:
+            flagged = " [FLAGGED]" if t.get("flagged") else ""
+            parts.append(f"  - R{t.get('amount', 0):,.0f} | {t.get('category', 'Uncategorized')} | {t.get('description', '')[:40]}{flagged}")
+
+    if ctx.get("stokvels"):
+        parts.append("Stokvel Groups:")
+        for s in ctx["stokvels"][:3]:
+            parts.append(f"  - {s.get('name', '')}: R{s.get('contribution_amount', 0):,.0f} {s.get('frequency', '')}")
+
+    if ctx.get("scam_stats"):
+        parts.append(f"Scam Shield: {ctx['scam_stats'].get('flagged_count', 0)} transactions flagged this month")
 
     parts.append("--- END SNAPSHOT ---")
     parts.append("\nUse this data to give personalized, specific advice. Reference actual numbers when relevant.")

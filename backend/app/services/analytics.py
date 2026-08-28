@@ -27,7 +27,7 @@ def calculate_financial_score(income: float, expenses: float, savings: float, de
     return max(0, min(100, int(score)))
 
 
-def generate_insights(income: float, categories: list, goals: list, financial_score: int) -> list[dict]:
+def generate_insights(income: float, categories: list, goals: list, financial_score: int, flagged_count: int = 0) -> list[dict]:
     insights = []
 
     total_budget = sum(c.get("amount", 0) for c in categories)
@@ -78,6 +78,20 @@ def generate_insights(income: float, categories: list, goals: list, financial_sc
             "type": "success",
             "title": "Almost There!",
             "message": f"You're 80%+ to your '{close_goals[0]['name']}' goal. A little push and you'll hit your target!",
+        })
+
+    # Scam shield insights
+    if flagged_count > 0:
+        insights.append({
+            "type": "warning",
+            "title": "Scam Shield Alert",
+            "message": f"{flagged_count} transaction(s) flagged as potentially fraudulent. Review them in the Transactions page to stay safe.",
+        })
+    else:
+        insights.append({
+            "type": "success",
+            "title": "Scam Shield Active",
+            "message": "No suspicious transactions detected this month. Keep monitoring your accounts.",
         })
 
     # Financial score guidance
