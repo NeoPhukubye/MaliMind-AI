@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 from app.config import settings
 from app.database.db import engine, Base
-from app.api import budget, ai, savings, subscriptions, users
+from app.api import budget, ai, savings, subscriptions, users, transactions, stokvels, ussd
 
 
 @asynccontextmanager
@@ -26,8 +26,11 @@ app.add_middleware(
 app.include_router(users.router, prefix="/api/users", tags=["users"])
 app.include_router(budget.router, prefix="/api/budget", tags=["budget"])
 app.include_router(savings.router, prefix="/api/savings", tags=["savings"])
+app.include_router(transactions.router, prefix="/api/transactions", tags=["transactions"])
+app.include_router(stokvels.router, prefix="/api/stokvels", tags=["stokvels"])
 app.include_router(ai.router, prefix="/api/ai", tags=["ai"])
 app.include_router(subscriptions.router, prefix="/api/subscriptions", tags=["subscriptions"])
+app.include_router(ussd.router, prefix="/api/ussd", tags=["ussd"])
 
 
 @app.get("/health")
