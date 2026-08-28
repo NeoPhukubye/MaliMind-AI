@@ -1,6 +1,6 @@
 import { Outlet, NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { LayoutDashboard, Wallet, PiggyBank, MessageSquare, User, Crown } from 'lucide-react'
+import { LayoutDashboard, Wallet, PiggyBank, Receipt, Users, Shield, MessageSquare, User, Crown } from 'lucide-react'
 import LanguageSelector from './LanguageSelector'
 
 export default function Layout() {
@@ -10,6 +10,9 @@ export default function Layout() {
     { to: '/app', icon: LayoutDashboard, label: t('nav.dashboard'), end: true },
     { to: '/app/budget', icon: Wallet, label: t('nav.budget') },
     { to: '/app/savings', icon: PiggyBank, label: t('nav.savings') },
+    { to: '/app/transactions', icon: Receipt, label: 'Transactions' },
+    { to: '/app/stokvels', icon: Users, label: 'Stokvels' },
+    { to: '/app/scam-shield', icon: Shield, label: 'Scam Shield' },
     { to: '/app/coach', icon: MessageSquare, label: t('nav.aiCoach') },
     { to: '/app/premium', icon: Crown, label: t('nav.premium') },
     { to: '/app/profile', icon: User, label: t('nav.profile') },
@@ -53,14 +56,14 @@ export default function Layout() {
           <Outlet />
         </main>
 
-        <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t flex">
-          {navItems.slice(0, 5).map((item) => (
+        <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t flex overflow-x-auto">
+          {navItems.slice(0, 8).map((item) => (
             <NavLink
               key={item.to}
               to={item.to}
               end={item.end}
               className={({ isActive }) =>
-                `flex-1 flex flex-col items-center py-3 text-xs ${isActive ? 'text-primary-600' : 'text-gray-400'}`
+                `flex-1 flex flex-col items-center py-3 text-xs min-w-[60px] ${isActive ? 'text-primary-600' : 'text-gray-400'}`
               }
             >
               <item.icon className="w-5 h-5 mb-1" />

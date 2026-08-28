@@ -16,6 +16,9 @@
     "dashboard": "Dashboard",
     "budget": "Budget",
     "savings": "Savings",
+    "transactions": "Transactions",
+    "stokvels": "Stokvels",
+    "scamShield": "Scam Shield",
     "aiCoach": "AI Coach",
     "premium": "Premium",
     "profile": "Profile"
@@ -149,5 +152,47 @@
   },
   "languageSelector": {
     "label": "Language"
+  },
+  "transactions": {
+    "title": "Transactions",
+    "addTransaction": "Add Transaction",
+    "search": "Search transactions...",
+    "totalIncome": "Total Income",
+    "totalExpenses": "Total Expenses",
+    "all": "All",
+    "flagged": "Flagged",
+    "noTransactions": "No transactions found.",
+    "amountR": "Amount (R)",
+    "expense": "Expense",
+    "income": "Income",
+    "description": "Description",
+    "merchant": "Merchant",
+    "recipient": "Recipient"
+  },
+  "stokvels": {
+    "title": "Stokvel Groups",
+    "newStokvel": "New Stokvel",
+    "name": "Stokvel name",
+    "contributionAmount": "Contribution amount (R)",
+    "frequency": "Frequency",
+    "startDate": "Start date",
+    "createStokvel": "Create Stokvel",
+    "members": "Members",
+    "contributions": "Contributions",
+    "addMember": "Add",
+    "addContribution": "Add",
+    "noStokvels": "No stokvels yet. Create your first group savings circle!",
+    "noMembers": "No members yet.",
+    "noContributions": "No contributions yet."
+  },
+  "scamShield": {
+    "title": "Scam Shield",
+    "flaggedTransactions": "Flagged Transactions",
+    "totalScanned": "Total Scanned",
+    "protectionRate": "Protection Rate",
+    "howItWorks": "How Scam Shield Works",
+    "howItWorksDesc": "Every outgoing transaction is scored using 5 fraud detection rules: velocity checks, reported numbers database, scam keyword detection, unusual amount analysis, and new recipient alerts. Transactions scoring 40+ are automatically flagged for your review.",
+    "review": "Review",
+    "safe": "No suspicious transactions detected. You're safe!"
   }
 }

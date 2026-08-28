@@ -4,6 +4,9 @@ import Landing from './pages/Landing'
 import Dashboard from './pages/Dashboard'
 import Budget from './pages/Budget'
 import Savings from './pages/Savings'
+import Transactions from './pages/Transactions'
+import Stokvels from './pages/Stokvels'
+import ScamShield from './pages/ScamShield'
 import Coach from './pages/Coach'
 import Profile from './pages/Profile'
 import Premium from './pages/Premium'
@@ -31,6 +34,9 @@ export default function App() {
         <Route index element={<Dashboard />} />
         <Route path="budget" element={<Budget />} />
         <Route path="savings" element={<Savings />} />
+        <Route path="transactions" element={<Transactions />} />
+        <Route path="stokvels" element={<Stokvels />} />
+        <Route path="scam-shield" element={<ScamShield />} />
         <Route path="coach" element={<Coach />} />
         <Route path="profile" element={<Profile />} />
         <Route path="premium" element={<Premium />} />
