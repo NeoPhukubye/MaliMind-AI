@@ -8,13 +8,16 @@ Over 60% of South Africans live paycheck to paycheck. Financial literacy is low,
 
 ## Our Solution
 
-MaliMind AI is a personal finance platform with an AI coach that understands African financial realities. It combines smart budgeting, savings goal tracking, and a conversational AI coach (powered by Google Gemini) that gives actionable, culturally-relevant financial advice — all monetized through a freemium subscription model via RevenueCat.
+MaliMind AI is a personal finance platform with an AI coach that understands African financial realities. It combines smart budgeting, savings goal tracking, transaction management with scam detection, stokvel group savings, and a conversational AI coach (powered by Google Gemini) that gives actionable, culturally-relevant financial advice — all monetized through a freemium subscription model via RevenueCat.
 
 ## Key Features
 
 - **AI Financial Coach** — Gemini-powered chat with context-aware advice on budgeting, saving, investing, and debt management tailored to South Africa (stokvels, unit trusts, TFSAs)
 - **Budget Planner** — Category-based budget tracking with visual progress bars and spending analysis
 - **Savings Goals** — Set targets with deadlines, track progress, and get AI recommendations
+- **Transaction Management** — Log transactions with smart categorization (Groceries, Transport, Bills, etc.)
+- **Scam Shield** — Real-time 5-rule fraud scoring (velocity, reported numbers, scam keywords, unusual amounts, new recipients)
+- **Stokvel Intelligence** — Group savings management with contribution tracking and payout rotation
 - **Financial Health Score** — Dynamic score calculated from income/expense ratio, savings rate, and debt burden
 - **Freemium Monetization** — 5 free AI messages/day, unlimited with Pro (R99/month via RevenueCat)
 - **Responsive Design** — Full mobile and desktop experience with sidebar + bottom nav
@@ -110,10 +113,24 @@ npm run dev
 | POST | `/api/budget` | Yes | Save/update budget |
 | GET | `/api/savings` | Yes | Get savings goals |
 | POST | `/api/savings` | Yes | Save/update goals |
+| GET | `/api/transactions` | Yes | List user transactions |
+| POST | `/api/transactions` | Yes | Create transaction (with scam scoring) |
+| GET | `/api/transactions/flagged` | Yes | Get flagged transactions |
+| GET | `/api/transactions/summary` | Yes | 30-day spending breakdown |
+| GET | `/api/transactions/{id}/scam-shield` | Yes | Get scam shield report for transaction |
+| GET | `/api/stokvels` | Yes | List user's stokvels |
+| POST | `/api/stokvels` | Yes | Create a stokvel group |
+| GET | `/api/stokvels/{id}` | Yes | Get stokvel details |
+| POST | `/api/stokvels/{id}/members` | Yes | Add member to stokvel |
+| GET | `/api/stokvels/{id}/members` | Yes | List stokvel members |
+| POST | `/api/stokvels/{id}/contributions` | Yes | Record contribution |
+| GET | `/api/stokvels/{id}/contributions` | Yes | List contributions |
 | GET | `/api/users/dashboard` | Yes | Dynamic financial dashboard |
-| GET | `/api/subscriptions/status/:id` | No | Check subscription status |
+| GET | `/api/users/me` | Yes | Get current user profile |
+| POST | `/api/subscriptions/status/:id` | No | Check subscription status |
 | POST | `/api/subscriptions/purchase` | Yes | Verify purchase receipt |
 | POST | `/api/subscriptions/webhook` | No | RevenueCat webhook events |
+| POST | `/api/ussd/callback` | No | Africa's Talking USSD webhook |
 
 ## What Makes This Different
 
