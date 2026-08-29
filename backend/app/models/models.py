@@ -90,3 +90,13 @@ class StokvelContribution(Base):
     date = Column(String, nullable=False)
     note = Column(String)
     created_at = Column(DateTime, default=datetime.utcnow)
+
+
+class Conversation(Base):
+    __tablename__ = "conversations"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    user_id = Column(String, nullable=False, index=True)
+    role = Column(String, nullable=False)
+    content = Column(Text, nullable=False)
+    created_at = Column(DateTime, default=datetime.utcnow, index=True)
