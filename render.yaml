@@ -1,0 +1,42 @@
+services:
+  - type: web
+    name: malimind-api
+    env: python
+    region: frankfurt
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: malimind-db
+          property: connectionString
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: CLERK_SECRET_KEY
+        sync: false
+      - key: REVENUECAT_API_KEY
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
+
+  - type: web
+    name: malimind-app
+    env: static
+    region: frankfurt
+    plan: free
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          name: malimind-api
+          type: web
+          property: host
+      - key: VITE_CLERK_PUBLISHABLE_KEY
+        sync: false
+
+databases:
+  - name: malimind-db
+    plan: free
+    region: frankfurt
