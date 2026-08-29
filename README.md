@@ -29,13 +29,13 @@ MaliMind AI is a personal finance platform with an AI coach that understands Afr
 │  React Frontend │────▶│  FastAPI Backend  │────▶│  PostgreSQL │
 │  (Clerk Auth)   │     │  (Auth Middleware)│     │  (Async)    │
 └─────────────────┘     └──────┬───────────┘     └─────────────┘
-                               │
-                    ┌──────────┼──────────┐
-                    ▼          ▼          ▼
-              ┌─────────┐ ┌────────┐ ┌──────────┐
-              │ Gemini  │ │Revenue │ │  Clerk   │
-              │   AI    │ │  Cat   │ │  JWKS    │
-              └─────────┘ └────────┘ └──────────┘
+                                │
+                     ┌──────────┼──────────┐
+                     ▼          ▼          ▼
+               ┌─────────┐ ┌────────┐ ┌──────────┐
+               │ Gemini  │ │Revenue │ │  Clerk   │
+               │   AI    │ │  Cat   │ │  JWKS    │
+               └─────────┘ └────────┘ └──────────┘
 ```
 
 ## Tech Stack
