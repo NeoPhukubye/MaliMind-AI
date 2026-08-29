@@ -7,7 +7,7 @@ from app.services.revenuecat_service import increment_message_count
 from app.services.analytics import calculate_financial_score
 from app.database.db import get_db
 from app.core.auth import get_current_user_id
-from app.models.models import BudgetData, SavingsData, Transaction, Stokvel
+from app.models.models import BudgetData, SavingsData, Transaction, Stokvel, Conversation
 
 router = APIRouter()
 
@@ -78,5 +78,26 @@ async def coach(
         "scam_stats": {"flagged_count": flagged_count},
     }
 
-    response = await get_coach_response(req.message, req.history, financial_context)
-    return CoachResponse(response=response)
+    history_result = await db.execute(
+        select(Conversation)
+        .where(Conversation.user_id == user_id)
+        .order_by(Conversation.created_at.desc())
+        .limit(20)
+    )
+    history_rows = history_result.scalars().all()
+    history = [
+        {"role": row.role, "content": row.content}
+        for row in reversed(history_rows)
+    ]
+
+    user_msg = Conversation(user_id=user_id, role="user", content=req.message)
+    db.add(user_msg)
+    await db.commit()
+
+    response_text = await get_coach_response(req.message, history, financial_context)
+
+    assistant_msg = Conversation(user_id=user_id, role="assistant", content=response_text)
+    db.add(assistant_msg)
+    await db.commit()
+
+    return CoachResponse(response=response_text)
